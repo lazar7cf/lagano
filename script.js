@@ -368,26 +368,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/* 
-  Sticky Navigation on Scroll
-*/
-document.addEventListener('DOMContentLoaded', () => {
-    const navbar = document.querySelector('.navbar');
-    if (!navbar) return;
-
-    let lastScroll = 0;
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-        
-        lastScroll = currentScroll;
-    });
-});
 
 /* 
   Open Now Status Indicator
