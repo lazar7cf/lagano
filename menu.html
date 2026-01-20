@@ -4,15 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Getränkekarte von Cafe Lagano - Premium Kaffee, Balkan Klassiker, Bier, Wein, Cocktails und mehr. Entdecken Sie unsere ausgewählten Spezialitäten.">
+    <meta property="og:title" content="Getränkekarte | Cafe Lagano">
+    <meta property="og:description" content="Ausgewählte Spezialitäten von Cafe Lagano - Premium Kaffee bis Balkan Klassiker.">
+    <meta property="og:type" content="website">
     <title>Getränkekarte | Cafe Lagano</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "name": "Getränkekarte Cafe Lagano",
+      "description": "Ausgewählte Spezialitäten von Cafe Lagano - Premium Kaffee, Balkan Klassiker, Bier, Wein, Cocktails und mehr",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Warme Getränke",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Espresso", "offers": {"@type": "Offer", "price": "2.50", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Cappuccino", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Latte Macchiato", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Alkoholfreie Getränke",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Cockta", "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Cedevita", "offers": {"@type": "Offer", "price": "3.60", "priceCurrency": "EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bier",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Jelen", "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Heineken", "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Weine",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Rotwein", "offers": {"@type": "Offer", "price": "4.30", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Weißwein", "offers": {"@type": "Offer", "price": "4.30", "priceCurrency": "EUR"}}
+          ]
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
+    <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+
     <nav class="container navbar">
         <a href="index.html" class="nav-logo">LAGANO</a>
+        <!-- Hamburger button for mobile (hidden on desktop) -->
+        <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+        <!-- Desktop navigation (hidden on mobile) -->
         <ul class="nav-links">
+            <li><a href="index.html#about">Über Uns</a></li>
+            <li><a href="menu.html" style="opacity: 1; border-bottom: 1px solid currentColor;">Getränke</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+        <!-- Mobile navigation menu (hidden by default, shown when hamburger is clicked) -->
+        <ul class="nav-links-mobile" id="mobile-menu" role="menu">
             <li><a href="index.html#about">Über Uns</a></li>
             <li><a href="menu.html" style="opacity: 1; border-bottom: 1px solid currentColor;">Getränke</a></li>
             <li><a href="index.html#contact">Kontakt</a></li>
@@ -24,6 +86,7 @@
         <div class="noise-overlay"></div>
     </div>
 
+    <main id="main-content">
     <div class="container section">
         <div class="menu-glass-card">
 
@@ -31,6 +94,17 @@
             <div class="menu-header">
                 <h1 class="hero-title" style="font-size: 3.5rem;">Getränke</h1>
                 <p class="hero-subtitle">Ausgewählte Spezialitäten von Cafe Lagano</p>
+                
+                <div class="menu-controls">
+                    <div class="menu-search-wrapper">
+                        <input type="text" id="menu-search" class="menu-search" placeholder="Getränk suchen..." aria-label="Menü durchsuchen">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="menu-toggle-buttons">
+                        <button class="btn-menu-toggle" id="expand-all" aria-label="Alle Kategorien öffnen">Alle öffnen</button>
+                        <button class="btn-menu-toggle" id="collapse-all" aria-label="Alle Kategorien schließen">Alle schließen</button>
+                    </div>
+                </div>
             </div>
 
             <div id="menu-container">
@@ -38,6 +112,12 @@
             </div>
         </div>
     </div>
+    </main>
+
+    <a href="index.html#contact" class="floating-cta" aria-label="Tisch reservieren">
+        <span>📞</span>
+        <span>Reservieren</span>
+    </a>
 
     <footer id="footer">
         <div class="container footer-content">

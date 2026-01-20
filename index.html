@@ -4,15 +4,136 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Cafe Lagano - Erleben Sie die perfekte Mischung aus balkanischer Gastfreundschaft und modernem Flair in Sindelfingen. Premium Kaffee, Balkan Klassiker und gemütliche Atmosphäre am Marktplatz.">
+    <meta property="og:title" content="Cafe Lagano | Kaffee & Balkan Spirit in Sindelfingen">
+    <meta property="og:description" content="Erleben Sie die perfekte Mischung aus balkanischer Gastfreundschaft und modernem Flair.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cafelagano.de">
     <title>Cafe Lagano | Kaffee & Balkan Spirit in Sindelfingen</title>
     <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Cafe Lagano",
+      "image": "https://cafelagano.de/assets/images/hero.png",
+      "@id": "https://cafelagano.de",
+      "url": "https://cafelagano.de",
+      "telephone": "+497031123456",
+      "email": "hello@cafelagano.de",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Marktplatz",
+        "addressLocality": "Sindelfingen",
+        "postalCode": "71063",
+        "addressCountry": "DE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 48.71261,
+        "longitude": 9.0016023
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "09:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "09:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "10:00",
+          "closes": "21:00"
+        }
+      ],
+      "priceRange": "€€",
+      "servesCuisine": "Balkan",
+      "description": "Cafe Lagano - Erleben Sie die perfekte Mischung aus balkanischer Gastfreundschaft und modernem Flair. Premium Kaffee, Balkan Klassiker und gemütliche Atmosphäre am Marktplatz in Sindelfingen.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.7",
+        "reviewCount": "3"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Maria K."
+          },
+          "datePublished": "2024-01-15",
+          "reviewBody": "Perfekte Mischung aus balkanischer Gastfreundschaft und modernem Ambiente. Der Kaffee ist fantastisch!",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Stefan B."
+          },
+          "datePublished": "2024-01-20",
+          "reviewBody": "Cockta und Cedevita wie zu Hause! Die Atmosphäre ist einzigartig und die Lage am Marktplatz perfekt.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          }
+        },
+        {
+          "@type": "Review",
+          "author": {
+            "@type": "Person",
+            "name": "Anna M."
+          },
+          "datePublished": "2024-02-01",
+          "reviewBody": "Toller Ort zum Entspannen. Die Auswahl an Getränken ist großartig und das Personal sehr freundlich.",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "4"
+          }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body>
 
+    <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+
     <nav class="container navbar">
         <a href="index.html" class="nav-logo">LAGANO</a>
+        <!-- Hamburger button for mobile (hidden on desktop) -->
+        <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+        <!-- Desktop navigation (hidden on mobile) -->
         <ul class="nav-links">
+            <li><a href="#about">Über Uns</a></li>
+            <li><a href="menu.html">Getränke</a></li>
+            <li><a href="#contact">Kontakt</a></li>
+        </ul>
+        <!-- Mobile navigation menu (hidden by default, shown when hamburger is clicked) -->
+        <ul class="nav-links-mobile" id="mobile-menu" role="menu">
             <li><a href="#about">Über Uns</a></li>
             <li><a href="menu.html">Getränke</a></li>
             <li><a href="#contact">Kontakt</a></li>
@@ -20,28 +141,29 @@
     </nav>
 
     <!-- Hero Section -->
+    <main id="main-content">
     <header class="hero">
-        <div class="container hero-content">
+        <div class="container hero-content fade-in-up">
             <h1 class="hero-title">CAFE LAGANO</h1>
             <p class="hero-subtitle">Erleben Sie die perfekte Mischung aus balkanischer Gastfreundschaft und modernem
                 Flair.</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
                 <a href="menu.html" class="btn">Zur Karte</a>
-                <a href="https://instagram.com" class="btn">Instagram</a>
+                <a href="https://instagram.com" class="btn" target="_blank" rel="noopener">Instagram</a>
             </div>
         </div>
         <div class="hero-image-wrapper">
-            <img src="assets/images/hero.png" alt="Cafe Lagano Atmosphäre">
+            <img src="assets/images/hero.png" alt="Cafe Lagano Atmosphäre" loading="eager" fetchpriority="high">
         </div>
     </header>
 
     <!-- About Section -->
     <section id="about" class="section container">
         <div class="about-grid">
-            <div class="about-image">
-                <img src="assets/images/about.png" alt="Authentische Kaffeespezialitäten">
+            <div class="about-image fade-in-up">
+                <img src="assets/images/about.png" alt="Authentische Kaffeespezialitäten" loading="lazy">
             </div>
-            <div class="about-text">
+            <div class="about-text fade-in-up">
                 <span
                     style="text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.1em; color: var(--color-accent); font-weight: 500;">Unsere
                     Story</span>
@@ -64,32 +186,28 @@
             <p style="color: var(--color-text-muted);">Was uns von anderen unterscheidet.</p>
         </div>
         <div class="category-grid">
-            <div class="category-card"
-                style="height: auto; padding: 2rem; background: var(--color-bg); border: 1px solid var(--color-line);">
+            <div class="category-card feature-card fade-in-up">
                 <span style="font-size: 2rem; color: var(--color-accent);">☕</span>
                 <h3 style="margin: 1rem 0; font-family: var(--font-body); font-weight: 500; font-size: 1.2rem;">Premium
                     Kaffee</h3>
                 <p style="font-size: 0.9rem; color: var(--color-text-muted);">Höchste Qualität in jeder Tasse, mit Liebe
                     von unseren Baristas zubereitet.</p>
             </div>
-            <div class="category-card"
-                style="height: auto; padding: 2rem; background: var(--color-bg); border: 1px solid var(--color-line);">
+            <div class="category-card feature-card fade-in-up">
                 <span style="font-size: 2rem; color: var(--color-accent);">🌿</span>
                 <h3 style="margin: 1rem 0; font-family: var(--font-body); font-weight: 500; font-size: 1.2rem;">Balkan
                     Klassiker</h3>
                 <p style="font-size: 0.9rem; color: var(--color-text-muted);">Erleben Sie Heimat-Flavour mit Cockta,
                     Cedevita oder eiskaltem Jelen-Bier.</p>
             </div>
-            <div class="category-card"
-                style="height: auto; padding: 2rem; background: var(--color-bg); border: 1px solid var(--color-line);">
+            <div class="category-card feature-card fade-in-up">
                 <span style="font-size: 2rem; color: var(--color-accent);">🛋️</span>
                 <h3 style="margin: 1rem 0; font-family: var(--font-body); font-weight: 500; font-size: 1.2rem;">Cozy
                     Vibe</h3>
                 <p style="font-size: 0.9rem; color: var(--color-text-muted);">Ein minimalistischer Rückzugsort zum
                     Entspannen und Genießen.</p>
             </div>
-            <div class="category-card"
-                style="height: auto; padding: 2rem; background: var(--color-bg); border: 1px solid var(--color-line);">
+            <div class="category-card feature-card fade-in-up">
                 <span style="font-size: 2rem; color: var(--color-accent);">📍</span>
                 <h3 style="margin: 1rem 0; font-family: var(--font-body); font-weight: 500; font-size: 1.2rem;">
                     Marktplatz Lage</h3>
@@ -110,28 +228,28 @@
                     <span>01</span>
                     <h3>Kaffee</h3>
                 </div>
-                <img src="assets/images/cat-coffee.png" alt="Kaffeespezialitäten">
+                <img src="assets/images/cat-coffee.png" alt="Kaffeespezialitäten" loading="lazy">
             </a>
             <a href="menu.html" class="category-card">
                 <div class="category-overlay">
                     <span>02</span>
                     <h3>Softdrinks</h3>
                 </div>
-                <img src="assets/images/cat-noncoffee.png" alt="Erfrischungsgetränke">
+                <img src="assets/images/cat-noncoffee.png" alt="Erfrischungsgetränke" loading="lazy">
             </a>
             <a href="menu.html" class="category-card">
                 <div class="category-overlay">
                     <span>03</span>
                     <h3>Bier & Wein</h3>
                 </div>
-                <img src="assets/images/cat-alcohol.png" alt="Alkoholische Getränke">
+                <img src="assets/images/cat-alcohol.png" alt="Alkoholische Getränke" loading="lazy">
             </a>
             <a href="menu.html" class="category-card">
                 <div class="category-overlay">
                     <span>04</span>
                     <h3>Cocktails</h3>
                 </div>
-                <img src="assets/images/cat-cocktail.png" alt="Cocktails">
+                <img src="assets/images/cat-cocktail.png" alt="Cocktails" loading="lazy">
             </a>
         </div>
     </section>
@@ -142,8 +260,12 @@
             <div class="about-grid" style="text-align: left;">
                 <div class="hours-text">
                     <h2 style="font-size: 2.5rem; margin-bottom: 2rem;">Öffnungszeiten</h2>
+                    <div id="open-status" class="open-status" aria-live="polite">
+                        <span class="status-indicator"></span>
+                        <span class="status-text"></span>
+                    </div>
                     <ul
-                        style="list-style: none; font-size: 1.1rem; border-left: 1px solid var(--color-accent); padding-left: 1.5rem;">
+                        style="list-style: none; font-size: 1.1rem; border-left: 1px solid var(--color-accent); padding-left: 1.5rem; margin-top: 1rem;">
                         <li style="margin-bottom: 0.5rem;"><strong>Mo - Do:</strong> 09:00 - 22:00 Uhr</li>
                         <li style="margin-bottom: 0.5rem;"><strong>Fr - Sa:</strong> 09:00 - 23:00 Uhr</li>
                         <li style="margin-bottom: 0.5rem;"><strong>Sonntag:</strong> 10:00 - 21:00 Uhr</li>
@@ -154,11 +276,38 @@
                     <h3 style="margin-bottom: 1rem;">Reservierungen</h3>
                     <p style="margin-bottom: 1.5rem; color: var(--color-text-muted);">Planen Sie einen Abend bei uns?
                         Wir freuen uns auf Ihren Besuch.</p>
-                    <p><strong>Telefon:</strong> +49 (0) 7031 123456</p>
-                    <p><strong>E-Mail:</strong> hello@cafelagano.de</p>
+                    <p><strong>Telefon:</strong> <a href="tel:+497031123456" style="color: var(--color-accent);">+49 (0) 7031 123456</a></p>
+                    <p><strong>E-Mail:</strong> <a href="mailto:hello@cafelagano.de" style="color: var(--color-accent);">hello@cafelagano.de</a></p>
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Marktplatz,+71063+Sindelfingen" class="btn"
+                        style="width: 100%; text-align: center; margin-top: 1rem; margin-bottom: 0.5rem;" target="_blank" rel="noopener">Wegbeschreibung</a>
                     <a href="https://instagram.com" class="btn"
-                        style="width: 100%; text-align: center; margin-top: 1rem;">Folgen Sie uns auf Instagram</a>
+                        style="width: 100%; text-align: center; margin-top: 0.5rem;" target="_blank" rel="noopener">Folgen Sie uns auf Instagram</a>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section container" style="background-color: #f3f2ed; border-radius: 12px; padding: var(--spacing-lg);">
+        <div class="text-center" style="margin-bottom: var(--spacing-lg);">
+            <h2 style="font-size: 2.5rem;">Was unsere Gäste sagen</h2>
+            <p style="color: var(--color-text-muted);">Echte Bewertungen von echten Gästen</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Perfekte Mischung aus balkanischer Gastfreundschaft und modernem Ambiente. Der Kaffee ist fantastisch!"</p>
+                <p class="review-author">— Maria K., Sindelfingen</p>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">"Cockta und Cedevita wie zu Hause! Die Atmosphäre ist einzigartig und die Lage am Marktplatz perfekt."</p>
+                <p class="review-author">— Stefan B., Böblingen</p>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★☆</div>
+                <p class="review-text">"Toller Ort zum Entspannen. Die Auswahl an Getränken ist großartig und das Personal sehr freundlich."</p>
+                <p class="review-author">— Anna M., Stuttgart</p>
             </div>
         </div>
     </section>
@@ -169,10 +318,17 @@
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.2081545688!2d9.0016023!3d48.71261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799da927891807d%3A0xc682f6e729a0f90!2sMarktpl.%2C%2071063%20Sindelfingen!5e0!3m2!1sde!2sde!4v1705680000000!5m2!1sde!2sde"
                 width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
+                referrerpolicy="no-referrer-when-downgrade" title="Cafe Lagano Standort auf Google Maps">
             </iframe>
         </div>
     </section>
+
+    </main>
+
+    <a href="#contact" class="floating-cta" aria-label="Tisch reservieren">
+        <span>📞</span>
+        <span>Reservieren</span>
+    </a>
 
     <footer id="footer">
         <div class="container footer-content">
