@@ -47,7 +47,15 @@ Sources, downloaded October 3, 2026, under the [Pexels license](https://www.pexe
 
 Selected photographs were visually checked for unrelated café logos and signage. The original `hero.png` visibly says “AURA CAFE” and is no longer referenced. All original image files are retained for project history, but none appear on the redesigned pages.
 
-Instrument Serif and DM Sans are self-hosted WOFF2 fonts. Their SIL Open Font License files are included in `assets/fonts/`; no Google Fonts request is made by the site.
+Archivo and Instrument Serif are self-hosted WOFF2 fonts. Their SIL Open Font License files are included in `assets/fonts/`; no Google Fonts request is made by the site. Archivo supplies the sturdy café-signage voice for body copy, navigation and menu headings; Instrument Serif preserves the existing wordmark and selected conversational headings.
+
+## Refinement pass
+
+The shared system uses deep olive fields, warm paper, sharp rectangular photographs and open typographic rows. The homepage now moves from a shared coffee scene through one concise Balkan hospitality passage, actual drinks and prices, then hours and directions. Unequal image sizes and a compact mobile composition replace repeated split sections. The map remains available in a native disclosure beside the real directions link.
+
+The drinks page uses a compact introduction, sticky category navigation, a search line, and aligned names and prices. Its photographic breaks have different scales rather than repeated decorative containers. Homepage drink selections are generated from the existing menu JSON alongside the complete menu and structured data.
+
+This pass was visually reviewed on both routes at desktop and mobile widths, with overflow and price wrapping checked at 375, 390, 430, 768, 1024, 1440 and 1512 pixels. Browser checks covered search, empty-result recovery, category navigation, keyboard dismissal of the mobile navigation and the map disclosure. The independent finish review found no material visual defect. Temporary photography remains easy to replace with real venue images.
 
 ## Business content requiring confirmation
 

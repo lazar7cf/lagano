@@ -117,7 +117,7 @@
     note.hidden = total === 0;
     clear.hidden = !search.value;
     empty.hidden = total !== 0;
-    resultStatus.textContent = term ? `${total} ${total === 1 ? 'Getränk gefunden' : 'Getränke gefunden'}` : 'Die ganze Karte. Ganz entspannt.';
+    resultStatus.textContent = term ? `${total} ${total === 1 ? 'Getränk gefunden' : 'Getränke gefunden'}` : 'Die ganze Karte mit Preisen.';
     const firstVisible = sections.find((section) => !section.hidden);
     setActiveCategory(firstVisible?.id);
   };

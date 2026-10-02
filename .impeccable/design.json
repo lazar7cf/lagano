@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T23:15:31.071133+00:00",
+  "title": "Design System: Cafe Lagano",
+  "extensions": {
+    "colorMeta": {
+      "cream": {
+        "role": "neutral",
+        "displayName": "Warm Paper",
+        "canonical": "#f2eee6",
+        "tonalRamp": [
+          "oklch(0.1500 0.01149 84.58)",
+          "oklch(0.2500 0.01149 84.58)",
+          "oklch(0.3600 0.01149 84.58)",
+          "oklch(0.4800 0.01149 84.58)",
+          "oklch(0.6000 0.01149 84.58)",
+          "oklch(0.7200 0.01149 84.58)",
+          "oklch(0.8400 0.01149 84.58)",
+          "oklch(0.9500 0.01149 84.58)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "sand": {
+        "role": "neutral",
+        "displayName": "Natural Sand",
+        "canonical": "#e6ded1",
+        "tonalRamp": [
+          "oklch(0.1500 0.01955 80.11)",
+          "oklch(0.2500 0.01955 80.11)",
+          "oklch(0.3600 0.01955 80.11)",
+          "oklch(0.4800 0.01955 80.11)",
+          "oklch(0.6000 0.01955 80.11)",
+          "oklch(0.7200 0.01955 80.11)",
+          "oklch(0.8400 0.01955 80.11)",
+          "oklch(0.9500 0.01955 80.11)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Charcoal",
+        "canonical": "#20201d",
+        "tonalRamp": [
+          "oklch(0.1500 0.00558 106.81)",
+          "oklch(0.2500 0.00558 106.81)",
+          "oklch(0.3600 0.00558 106.81)",
+          "oklch(0.4800 0.00558 106.81)",
+          "oklch(0.6000 0.00558 106.81)",
+          "oklch(0.7200 0.00558 106.81)",
+          "oklch(0.8400 0.00558 106.81)",
+          "oklch(0.9500 0.00558 106.81)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Warm Gray",
+        "canonical": "#625e54",
+        "tonalRamp": [
+          "oklch(0.1500 0.01641 88.77)",
+          "oklch(0.2500 0.01641 88.77)",
+          "oklch(0.3600 0.01641 88.77)",
+          "oklch(0.4800 0.01641 88.77)",
+          "oklch(0.6000 0.01641 88.77)",
+          "oklch(0.7200 0.01641 88.77)",
+          "oklch(0.8400 0.01641 88.77)",
+          "oklch(0.9500 0.01641 88.77)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "olive": {
+        "role": "primary",
+        "displayName": "Deep Olive",
+        "canonical": "#445038",
+        "tonalRamp": [
+          "oklch(0.1500 0.04140 129.65)",
+          "oklch(0.2500 0.04140 129.65)",
+          "oklch(0.3600 0.04140 129.65)",
+          "oklch(0.4800 0.04140 129.65)",
+          "oklch(0.6000 0.04140 129.65)",
+          "oklch(0.7200 0.04140 129.65)",
+          "oklch(0.8400 0.04140 129.65)",
+          "oklch(0.9500 0.04140 129.65)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "olive-light": {
+        "role": "primary",
+        "displayName": "Pale Olive",
+        "canonical": "#d7ddcc",
+        "tonalRamp": [
+          "oklch(0.1500 0.02375 122.76)",
+          "oklch(0.2500 0.02375 122.76)",
+          "oklch(0.3600 0.02375 122.76)",
+          "oklch(0.4800 0.02375 122.76)",
+          "oklch(0.6000 0.02375 122.76)",
+          "oklch(0.7200 0.02375 122.76)",
+          "oklch(0.8400 0.02375 122.76)",
+          "oklch(0.9500 0.02375 122.76)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "espresso": {
+        "role": "secondary",
+        "displayName": "Espresso",
+        "canonical": "#34261f",
+        "tonalRamp": [
+          "oklch(0.1500 0.02469 47.83)",
+          "oklch(0.2500 0.02469 47.83)",
+          "oklch(0.3600 0.02469 47.83)",
+          "oklch(0.4800 0.02469 47.83)",
+          "oklch(0.6000 0.02469 47.83)",
+          "oklch(0.7200 0.02469 47.83)",
+          "oklch(0.8400 0.02469 47.83)",
+          "oklch(0.9500 0.02469 47.83)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "clay": {
+        "role": "secondary",
+        "displayName": "Warm Clay",
+        "canonical": "#944d36",
+        "tonalRamp": [
+          "oklch(0.1500 0.10182 38.60)",
+          "oklch(0.2500 0.10182 38.60)",
+          "oklch(0.3600 0.10182 38.60)",
+          "oklch(0.4800 0.10182 38.60)",
+          "oklch(0.6000 0.10182 38.60)",
+          "oklch(0.7200 0.10182 38.60)",
+          "oklch(0.8400 0.10182 38.60)",
+          "oklch(0.9500 0.10182 38.60)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Paper Rule",
+        "canonical": "rgba(32,32,29,.18)",
+        "tonalRamp": [
+          "oklch(0.1500 0.00558 106.81 / 0.18)",
+          "oklch(0.2500 0.00558 106.81 / 0.18)",
+          "oklch(0.3600 0.00558 106.81 / 0.18)",
+          "oklch(0.4800 0.00558 106.81 / 0.18)",
+          "oklch(0.6000 0.00558 106.81 / 0.18)",
+          "oklch(0.7200 0.00558 106.81 / 0.18)",
+          "oklch(0.8400 0.00558 106.81 / 0.18)",
+          "oklch(0.9500 0.00558 106.81 / 0.18)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      },
+      "light-line": {
+        "role": "neutral",
+        "displayName": "Olive Rule",
+        "canonical": "rgba(242,238,230,.3)",
+        "tonalRamp": [
+          "oklch(0.1500 0.01149 84.58 / 0.3)",
+          "oklch(0.2500 0.01149 84.58 / 0.3)",
+          "oklch(0.3600 0.01149 84.58 / 0.3)",
+          "oklch(0.4800 0.01149 84.58 / 0.3)",
+          "oklch(0.6000 0.01149 84.58 / 0.3)",
+          "oklch(0.7200 0.01149 84.58 / 0.3)",
+          "oklch(0.8400 0.01149 84.58 / 0.3)",
+          "oklch(0.9500 0.01149 84.58 / 0.3)"
+        ],
+        "rampOrigin": "Synthesized OKLCH inspection aid; the canonical CSS value remains normative."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Sturdy Signage",
+        "purpose": "Homepage sans headline.",
+        "responsive": {
+          "max-width: 767px": {
+            "fontSize": "clamp(31px,8.4vw,46px)",
+            "lineHeight": 1.16
+          }
+        }
+      },
+      "display-serif": {
+        "displayName": "Conversational Serif",
+        "purpose": "Italic phrase in the homepage headline.",
+        "fontStyle": "italic",
+        "responsive": {
+          "max-width: 767px": {
+            "fontSize": "clamp(48px,12.5vw,65px)",
+            "lineHeight": 1.16
+          }
+        }
+      },
+      "headline": {
+        "displayName": "Selected Serif Headline",
+        "purpose": "Conversational section headings.",
+        "responsive": {
+          "max-width: 767px": {
+            "fontSize": "clamp(37px,9.5vw,48px)"
+          }
+        }
+      },
+      "menu-headline": {
+        "displayName": "Menu Title",
+        "purpose": "Compact serif menu-page title.",
+        "responsive": {
+          "max-width: 767px": {
+            "fontSize": "clamp(38px,10.4vw,46px)",
+            "lineHeight": 1.03
+          }
+        }
+      },
+      "title": {
+        "displayName": "Category Signage",
+        "purpose": "Archivo category heading in the reading rail.",
+        "responsive": {
+          "max-width: 767px": {
+            "fontSize": "25px"
+          }
+        }
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Base copy, fields and information."
+      },
+      "label": {
+        "displayName": "Button Label",
+        "purpose": "Rectangular button labels."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Shared desktop navigation; 16px on mobile."
+      },
+      "menu-item": {
+        "displayName": "Menu Name",
+        "purpose": "Flexible, wrapping factual drink name."
+      },
+      "menu-price": {
+        "displayName": "Menu Price",
+        "purpose": "Unbroken right-hand price.",
+        "fontVariantNumeric": "tabular-nums"
+      },
+      "menu-meta": {
+        "displayName": "Menu Detail",
+        "purpose": "Existing serving size or description; 12px on mobile."
+      },
+      "caption": {
+        "displayName": "Photograph Caption",
+        "purpose": "Quiet secondary image context; normally 11px on mobile."
+      },
+      "wordmark": {
+        "displayName": "Lowercase Wordmark",
+        "purpose": "Preserved identity asset; 37px on mobile."
+      },
+      "text-link": {
+        "displayName": "Underlined Text Action",
+        "purpose": "Text links inherit the 1.6 body line height."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Shared state-transition and hero-settle easing."
+      },
+      {
+        "name": "control-transition",
+        "value": "250ms",
+        "purpose": "Button color, navigation underline, toggle lines and disclosure SVG."
+      },
+      {
+        "name": "category-transition",
+        "value": "300ms",
+        "purpose": "Category-current and hover underline."
+      },
+      {
+        "name": "hero-settle",
+        "value": "850ms",
+        "purpose": "Already-visible photograph settles from scale(1.025) to scale(1), only with no-preference."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-desktop",
+        "value": "1100px",
+        "query": "(max-width: 1100px)",
+        "purpose": "Hide header location and reduce column gaps and menu type."
+      },
+      {
+        "name": "mobile",
+        "value": "767px",
+        "query": "(max-width: 767px)",
+        "purpose": "Stack main compositions, activate mobile navigation, and use single-column menu rows."
+      }
+    ],
+    "unrepresentableCss": {
+      "focus": ":focus-visible { outline: 2px solid var(--clay); outline-offset: 5px; } .home-hero :focus-visible,.visit-section :focus-visible,.menu-visit :focus-visible { outline-color: var(--cream); } .category-nav a:focus-visible { outline-color: var(--cream); outline-offset: -4px; } main:focus { outline: none; }",
+      "container": ".container { width: min(calc(100% - var(--gutter)*2),1280px); margin-inline: auto; }",
+      "sticky": "--header-height: 80px; --category-height: 56px; .site-header { position: sticky; top: 0; z-index: 20; } .category-bar { position: sticky; top: var(--header-height); z-index: 10; } @media (max-width: 767px) { :root { --header-height: 72px; --category-height: 52px; } }",
+      "anchorOffsets": "html { scroll-behavior: smooth; scroll-padding-top: calc(var(--header-height) + 20px); } .menu-section { scroll-margin-top: calc(var(--category-height) + 4px); }",
+      "heroAnimation": "@media (prefers-reduced-motion: no-preference) { .hero-photo img { animation: table-settle 850ms var(--ease) both; } @keyframes table-settle { from { transform: scale(1.025); } to { transform: scale(1); } } }",
+      "reducedMotion": "@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *,*::before,*::after { animation: none !important; transition: none !important; } }",
+      "selection": "::selection { background: var(--olive); color: var(--cream); } .home-hero ::selection,.visit-section ::selection,.menu-visit ::selection { background: var(--cream); color: var(--olive); }",
+      "photos": ".photo { overflow: hidden; background: var(--sand); } .photo img { height: 100%; object-fit: cover; }",
+      "statusDot": ".status-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--olive-light); flex-shrink: 0; } .is-closed .status-dot { background: var(--cream); }",
+      "print": "@media print { .site-header,.category-bar,.menu-tools,.menu-hero-figure,.menu-photo-break,.menu-visit,.site-footer,.back-link,.skip-link { display: none; } .menu-body,.menu-hero { width: 100%; padding: 20px 0; } .menu-section { break-inside: avoid; } .menu-item { min-height: 0; padding-block: 8px; } }"
+    },
+    "states": {
+      "buttons": "Primary hover is espresso; light hover is pale olive. Focus is clay on paper and paper on olive. No active, disabled or loading styles exist.",
+      "navigation": "aria-current=page shows the desktop underline. aria-expanded updates the short mobile dropdown and toggle-line rotation. Escape closes and restores focus.",
+      "categories": "aria-current=location shows the paper underline. Selecting a category clears search. The active category scrolls into the mobile rail; reduced-motion uses instant scrolling.",
+      "search": "Non-empty input reveals the clear control; Escape or reset restores input focus. Results use a polite live region. Empty results reveal the existing primary reset action. Controls are progressively enhanced.",
+      "map": "Native details open state rotates the summary plus by 45deg. Hover is pale olive; focus is paper.",
+      "openingStatus": "Written open/closed text accompanies the dot; Berlin-time status is progressively enhanced."
+    },
+    "notCanonized": [
+      "The existing search-clear × text glyph is not included as a reusable icon pattern; the shipped documenter forbids canonizing glyph icons. It was not repaired within this documentation-only boundary.",
+      "The existing CAFE lockup is part of the preserved identity asset, not a section-eyebrow vocabulary.",
+      "Temporary stock photography is an implementation limitation; it is not proof of actual venue, staff or customers."
+    ],
+    "sourceFiles": [
+      "styles.css",
+      "assets/fonts/fonts.css",
+      "index.html",
+      "menu.html",
+      "script.js",
+      "partials/header.html",
+      "partials/footer.html"
+    ],
+    "tokenAuthority": "DESIGN.md YAML owns primitives. Component CSS references incumbent CSS custom properties with literal canonical fallbacks for isolated panel rendering."
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "description": "Flat olive action on warm paper; hover changes to espresso.",
+      "html": "<a class=\"ds-button\" href=\"menu.html\">Getränkekarte ansehen <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;min-height:52px;padding:14px 19px;border:0;border-radius:0;background:var(--olive,#445038);color:var(--cream,#f2eee6);font-family:var(--sans,'Archivo',Arial,sans-serif);font-size:14px;font-weight:500;line-height:1.4;text-decoration:none;cursor:pointer;transition:background-color .25s var(--ease,cubic-bezier(.16,1,.3,1)),color .25s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover{background:var(--espresso,#34261f)}.ds-button:focus-visible{outline:2px solid var(--clay,#944d36);outline-offset:5px;}.ds-arrow{width:20px;height:20px;flex:0 0 20px}@media(prefers-reduced-motion:reduce){.ds-button,.ds-link,.ds-nav a::after,.ds-category a::after,.ds-disclosure svg{transition:none!important;animation:none!important}}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Light Button",
+      "kind": "button",
+      "description": "Warm-paper action used on deep olive; its focus ring remains light.",
+      "html": "<div class=\"ds-olive-field\"><a class=\"ds-button ds-button-light\" href=\"menu.html\">Getränkekarte ansehen <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></div>",
+      "css": ".ds-button{display:inline-flex;align-items:center;justify-content:space-between;gap:26px;min-height:52px;padding:14px 19px;border:0;border-radius:0;background:var(--olive,#445038);color:var(--cream,#f2eee6);font-family:var(--sans,'Archivo',Arial,sans-serif);font-size:14px;font-weight:500;line-height:1.4;text-decoration:none;cursor:pointer;transition:background-color .25s var(--ease,cubic-bezier(.16,1,.3,1)),color .25s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-button:hover{background:var(--espresso,#34261f)}.ds-button:focus-visible{outline:2px solid var(--clay,#944d36);outline-offset:5px;}.ds-arrow{width:20px;height:20px;flex:0 0 20px}.ds-olive-field{background:var(--olive,#445038)}.ds-button-light{background:var(--cream,#f2eee6);color:var(--olive,#445038)}.ds-button-light:hover{background:var(--olive-light,#d7ddcc)}.ds-button-light:focus-visible{outline:2px solid var(--cream,#f2eee6);outline-offset:5px;}@media(prefers-reduced-motion:reduce){.ds-button,.ds-link,.ds-nav a::after,.ds-category a::after,.ds-disclosure svg{transition:none!important;animation:none!important}}",
+      "refersTo": "button-light"
+    },
+    {
+      "name": "Text Link",
+      "kind": "button",
+      "description": "Open underlined action; clay identifies hover on paper.",
+      "html": "<a class=\"ds-link\" href=\"menu.html\">Komplette Karte ansehen <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;justify-content:space-between;gap:22px;min-height:44px;padding-block:10px;border-bottom:1px solid currentColor;color:var(--ink,#20201d);font-family:var(--sans,'Archivo',Arial,sans-serif);font-size:14px;font-weight:500;line-height:1.6;text-decoration:none}.ds-link:hover{color:var(--clay,#944d36)}.ds-link:focus-visible{outline:2px solid var(--clay,#944d36);outline-offset:5px;}.ds-arrow{width:20px;height:20px;flex:0 0 20px}",
+      "refersTo": "text-link"
+    },
+    {
+      "name": "Shared Navigation",
+      "kind": "nav",
+      "description": "Desktop current-page and hover underlines; mobile becomes a short vertical list.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Hauptnavigation\"><a href=\"index.html#about\">Story</a><a href=\"menu.html\" aria-current=\"page\">Getränke</a><a href=\"index.html#hours\">Öffnungszeiten</a><a class=\"ds-nav-cta\" href=\"index.html#contact\">Vorbeikommen <svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></nav>",
+      "css": ".ds-nav{display:flex;align-items:center;gap:30px;background:var(--cream,#f2eee6);color:var(--ink,#20201d);font-family:var(--sans,'Archivo',Arial,sans-serif);line-height:1.6}.ds-nav>a{display:inline-flex;align-items:center;gap:10px;min-height:44px;font-size:13px;position:relative;color:inherit;text-decoration:none}.ds-nav>a::after{content:\"\";position:absolute;left:0;right:0;bottom:7px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-nav>a:hover::after,.ds-nav>a[aria-current=\"page\"]::after{transform:scaleX(1)}.ds-nav>a:focus-visible{outline:2px solid var(--clay,#944d36);outline-offset:5px;}.ds-nav>.ds-nav-cta{font-weight:600;color:var(--olive,#445038)}@media(max-width:767px){.ds-nav{padding:12px var(--gutter,clamp(20px,4.5vw,64px)) 20px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid var(--line,rgba(32,32,29,.18))}.ds-nav>a{min-height:48px;font-size:16px}.ds-nav>a::after{display:none}.ds-nav>.ds-nav-cta{justify-content:space-between}}.ds-arrow{width:20px;height:20px;flex:0 0 20px}@media(prefers-reduced-motion:reduce){.ds-button,.ds-link,.ds-nav a::after,.ds-category a::after,.ds-disclosure svg{transition:none!important;animation:none!important}}"
+    },
+    {
+      "name": "Category Reading Rail",
+      "kind": "nav",
+      "description": "Olive category rail with actual current-location semantics and a horizontal mobile scroll.",
+      "html": "<nav class=\"ds-category\" aria-label=\"Getränkekategorien\"><a href=\"menu.html#warme-getraenke\" aria-current=\"location\">Warme Getränke</a><a href=\"menu.html#alkoholfreie-getraenke\">Alkoholfreie Getränke</a><a href=\"menu.html#bier\">Bier</a><a href=\"menu.html#weine\">Weine</a><a href=\"menu.html#flaschen\">Flaschen</a><a href=\"menu.html#shots\">Shots</a><a href=\"menu.html#spirituosen\">Spirituosen</a></nav>",
+      "css": ".ds-category{display:flex;align-items:center;gap:30px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:thin;scrollbar-color:var(--olive-light,#d7ddcc) var(--olive,#445038);background:var(--olive,#445038);color:var(--cream,#f2eee6);font-family:var(--sans,'Archivo',Arial,sans-serif);line-height:1.6}.ds-category a{display:inline-flex;align-items:center;flex-shrink:0;min-height:var(--category-height,56px);white-space:nowrap;font-size:14px;position:relative;color:inherit;text-decoration:none}.ds-category a::after{content:\"\";position:absolute;bottom:9px;left:0;right:0;height:2px;background:var(--cream,#f2eee6);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-category a[aria-current=\"location\"]::after,.ds-category a:hover::after{transform:scaleX(1)}.ds-category a:focus-visible{outline:2px solid var(--cream,#f2eee6);outline-offset:-4px}@media(max-width:767px){.ds-category{padding-inline:var(--gutter,clamp(20px,4.5vw,64px));gap:24px}.ds-category a{min-height:52px;font-size:13px}.ds-category a::after{bottom:8px}}@media(prefers-reduced-motion:reduce){.ds-button,.ds-link,.ds-nav a::after,.ds-category a::after,.ds-disclosure svg{transition:none!important;animation:none!important}}",
+      "refersTo": "category-navigation"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "description": "Transparent search with a charcoal baseline, SVG icon and visible clay keyboard focus.",
+      "html": "<div class=\"ds-search-field\"><label class=\"ds-sr\" for=\"ds-menu-search\">Getränk suchen</label><div class=\"ds-search-wrap\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><circle cx=\"10.5\" cy=\"10.5\" r=\"6.5\"/><path d=\"m16 16 5 5\"/></svg><input type=\"search\" id=\"ds-menu-search\" placeholder=\"Getränk suchen …\" autocomplete=\"off\"></div></div>",
+      "css": ".ds-search-field{width:min(100%,340px)}.ds-sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}.ds-search-wrap{position:relative}.ds-search-wrap>svg{position:absolute;width:18px;height:18px;top:16px;left:0;color:var(--muted,#625e54);pointer-events:none}.ds-search-wrap input{display:block;width:100%;min-height:50px;padding:12px 44px 12px 30px;border:0;border-bottom:1px solid var(--ink,#20201d);border-radius:0;background:transparent;color:var(--ink,#20201d);font-family:var(--sans,'Archivo',Arial,sans-serif);font-size:16px;line-height:1.6;caret-color:var(--olive,#445038);appearance:none}.ds-search-wrap input::-webkit-search-cancel-button{appearance:none}.ds-search-wrap input::placeholder{color:var(--muted,#625e54);opacity:1}.ds-search-wrap input:focus-visible{outline:2px solid var(--clay,#944d36);outline-offset:5px;}@media(max-width:767px){.ds-search-field{width:100%}}",
+      "refersTo": "search-field"
+    },
+    {
+      "name": "Open Menu Row",
+      "kind": "custom",
+      "description": "A factual name, serving size and tabular price; the regional variant uses olive weight.",
+      "html": "<ul class=\"ds-menu-items\"><li class=\"ds-menu-item ds-regional\"><div class=\"ds-menu-info\"><h3 class=\"ds-menu-name\">Cockta</h3><p class=\"ds-menu-desc\">0.25l</p></div><span class=\"ds-menu-price\">4,00 €</span></li></ul>",
+      "css": ".ds-menu-items{margin:0;padding:0;list-style:none;color:var(--ink,#20201d);font-family:var(--sans,'Archivo',Arial,sans-serif);line-height:1.6}.ds-menu-item{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:18px;min-height:64px;padding-block:14px;border-top:1px solid var(--line,rgba(32,32,29,.18))}.ds-menu-info{min-width:0}.ds-menu-name{margin:0;font-size:16px;font-weight:400;line-height:1.4;overflow-wrap:anywhere}.ds-menu-desc{margin:4px 0 0;color:var(--muted,#625e54);font-size:13px;line-height:1.4}.ds-menu-price{white-space:nowrap;font-size:16px;font-weight:500;font-variant-numeric:tabular-nums}.ds-regional .ds-menu-name{color:var(--olive,#445038);font-weight:600}@media(max-width:1100px){.ds-menu-name,.ds-menu-price{font-size:15px}}@media(max-width:767px){.ds-menu-item{min-height:56px}.ds-menu-name,.ds-menu-price{font-size:16px}.ds-menu-desc{font-size:12px}}",
+      "refersTo": "menu-item"
+    },
+    {
+      "name": "Opening Hours Row",
+      "kind": "custom",
+      "description": "Day and unbroken tabular time on an olive field, with a light dividing rule.",
+      "html": "<dl class=\"ds-hours\"><div><dt>Mo – Do</dt><dd>09:00 – 22:00</dd></div></dl>",
+      "css": ".ds-hours{margin:0;background:var(--olive,#445038);color:var(--cream,#f2eee6);font-family:var(--sans,'Archivo',Arial,sans-serif);line-height:1.6}.ds-hours>div{display:flex;justify-content:space-between;gap:20px;padding-block:19px;border-top:1px solid var(--light-line,rgba(242,238,230,.3));font-size:16px}.ds-hours dd{margin:0;white-space:nowrap;font-variant-numeric:tabular-nums}@media(max-width:767px){.ds-hours>div{font-size:14px;padding-block:17px;gap:12px}}",
+      "refersTo": "hours-row"
+    },
+    {
+      "name": "Native Map Disclosure",
+      "kind": "custom",
+      "description": "The actual native details/summary pattern with SVG rotation, light focus and existing map destination.",
+      "html": "<details class=\"ds-disclosure\"><summary>Marktplatz auf der Karte ansehen<svg class=\"ds-arrow\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\" aria-hidden=\"true\"><path d=\"M12 5v14M5 12h14\"/></svg></summary><div class=\"ds-map\"><iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2633.2081545688!2d9.0016023!3d48.71261!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4799da927891807d%3A0xc682f6e729a0f90!2sMarktpl.%2C%2071063%20Sindelfingen!5e0!3m2!1sde!2sde!4v1705680000000!5m2!1sde!2sde\" width=\"1280\" height=\"360\" title=\"Marktplatz in Sindelfingen auf Google Maps\" loading=\"lazy\" referrerpolicy=\"no-referrer-when-downgrade\" allowfullscreen></iframe></div></details>",
+      "css": ".ds-disclosure{border-top:1px solid var(--light-line,rgba(242,238,230,.3));background:var(--olive,#445038);color:var(--cream,#f2eee6);font-family:var(--sans,'Archivo',Arial,sans-serif);line-height:1.6}.ds-disclosure summary{display:flex;justify-content:space-between;align-items:center;gap:20px;min-height:52px;padding-block:14px;font-size:14px;cursor:pointer;list-style:none}.ds-disclosure summary::-webkit-details-marker{display:none}.ds-disclosure summary:hover{color:var(--olive-light,#d7ddcc)}.ds-disclosure summary:focus-visible{outline:2px solid var(--cream,#f2eee6);outline-offset:5px;}.ds-disclosure summary svg{transition:transform .25s var(--ease,cubic-bezier(.16,1,.3,1))}.ds-disclosure[open] summary svg{transform:rotate(45deg)}.ds-map{background:var(--sand,#e6ded1);margin-top:12px}.ds-map iframe{display:block;width:100%;height:280px;border:0}@media(max-width:767px){.ds-map iframe{height:230px}}.ds-arrow{width:20px;height:20px;flex:0 0 20px}@media(prefers-reduced-motion:reduce){.ds-button,.ds-link,.ds-nav a::after,.ds-category a::after,.ds-disclosure svg{transition:none!important;animation:none!important}}",
+      "refersTo": "map-disclosure-summary"
+    },
+    {
+      "name": "Preserved Wordmark",
+      "kind": "custom",
+      "description": "The existing lowercase serif name and its CAFE identity lockup; not a general section label.",
+      "html": "<a class=\"ds-wordmark\" href=\"index.html\" aria-label=\"Cafe Lagano — Startseite\"><span class=\"ds-wordmark-cafe\">CAFE</span><span>lagano</span></a>",
+      "css": ".ds-wordmark{display:inline-flex;flex-direction:column;align-items:center;font-family:var(--serif,'Instrument Serif',Georgia,serif);font-size:43px;font-weight:400;line-height:.85;letter-spacing:-.03em;flex-shrink:0;color:var(--ink,#20201d);text-decoration:none}.ds-wordmark-cafe{font-family:var(--sans,'Archivo',Arial,sans-serif);font-size:11px;line-height:1.2;letter-spacing:.15em;margin-bottom:6px}.ds-wordmark:focus-visible{outline:2px solid var(--clay,#944d36);outline-offset:5px;}@media(max-width:767px){.ds-wordmark{font-size:37px}.ds-wordmark-cafe{margin-bottom:5px}}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Café Window Lettering",
+    "overview": "Café Window Lettering gives Lagano a sturdy, welcoming voice: clear signage, a familiar serif name, warm paper and deep olive surfaces. The atmosphere is that of a contemporary European neighbourhood café, with Balkan sociability expressed through conversation and the real drinks rather than decorative cultural motifs.\n\nThe system is open and editorial. Strong type, unequal rectangular photographs and deliberate space carry the identity; useful rules organize information. It should feel relaxed and human, with enough visual confidence to avoid a generic café template. The pinned brand brief rejects luxury restaurant styling, SaaS presentation, decorative cards and pills, gradients and excessive shadows.",
+    "keyCharacteristics": [
+      "Sturdy Archivo signage with a preserved Instrument Serif wordmark.",
+      "Deep olive fields and warm paper, with clay reserved for interaction accents.",
+      "Open typographic rows, clear reading rails and aligned prices.",
+      "Sharp photographs at varied scales, with natural café light.",
+      "Short, calm state transitions and complete reduced-motion support."
+    ],
+    "rules": [
+      {
+        "name": "The Field and Signal Rule",
+        "body": "Olive and paper establish the atmosphere; clay marks hover and focus. Preserve the light text and light focus treatment when a control sits on olive.",
+        "section": "colors"
+      },
+      {
+        "name": "The Two Voices Rule",
+        "body": "Use Archivo for information and sturdy signage; reserve Instrument Serif for the name and selected conversational emphasis. Do not repeat a serif-and-italic heading formula throughout a page.",
+        "section": "typography"
+      },
+      {
+        "name": "The Open Reading Rule",
+        "body": "Separate content with whitespace and useful rules. Keep names and prices in aligned rows, with flexible names and unbroken prices, instead of placing each drink inside a container.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Surface Rule",
+        "body": "A component is flat at rest and during interaction. Use color, underlining and visible focus to communicate state; do not add elevation to simulate affordance.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** use the frontmatter's exact olive, paper and text colors with their established light/dark roles.",
+      "**Do** keep Archivo as the information voice and preserve the lowercase Instrument Serif wordmark.",
+      "**Do** build clear reading rails and aligned rows with flexible names, unbroken prices and useful rules.",
+      "**Do** vary photograph scale within sharp containers and keep images replaceable through reserved dimensions and adjustable crops.",
+      "**Do** use visible keyboard focus, written status, semantic state attributes and the complete reduced-motion behavior.",
+      "**Do** keep menu facts and destinations tied to the project's existing verified sources."
+    ],
+    "donts": [
+      "**Don't** introduce cards around every item, nested cards, pill controls, giant radii, gradients, glass effects or decorative shadows.",
+      "**Don't** turn every section into the same serif-and-italic split composition or add repeated eyebrow labels.",
+      "**Don't** use cultural motifs, luxury cues or decorative icons as a substitute for the café's warm, sociable character.",
+      "**Don't** hide the menu or navigation behind JavaScript, or let sticky controls cover anchor targets.",
+      "**Don't** add reveal choreography, parallax or looping decorative motion to the restrained interaction vocabulary.",
+      "**Don't** present temporary café photographs as actual Lagano premises, staff or customers, or invent prices and business details."
+    ]
+  }
+}

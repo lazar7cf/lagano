@@ -11,7 +11,7 @@
   <meta property="og:locale" content="de_DE">
   <title>Getränkekarte | Cafe Lagano Sindelfingen</title>
   <link rel="preload" href="assets/fonts/instrument-serif-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/dm-sans-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
   <script src="script.js" defer></script>
@@ -888,24 +888,24 @@
 <header class="site-header">
   <div class="container header-inner">
     <a class="wordmark" href="index.html" aria-label="Cafe Lagano — Startseite"><span class="wordmark-kicker">CAFE</span><span>lagano</span></a>
+    <span class="header-place">Marktplatz · Sindelfingen</span>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Navigation öffnen" hidden>
-      <span class="nav-toggle-label">Menü</span><span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span></span>
+      <span class="nav-toggle-label">Navigation</span><span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span></span>
     </button>
     <nav id="site-navigation" class="site-navigation" aria-label="Hauptnavigation">
       <a href="index.html#about">Story</a>
       <a href="menu.html" aria-current="page">Getränke</a>
       <a href="index.html#hours">Öffnungszeiten</a>
-      <a href="index.html#contact">Kontakt</a>
-      <a class="header-cta" href="#menu-visit">Vorbeikommen <span aria-hidden="true">↗</span></a>
+      <a class="header-cta" href="#menu-visit">Vorbeikommen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
     </nav>
   </div>
 </header>
 <!-- shared-header:end -->
   <main id="main-content" tabindex="-1">
     <section class="menu-hero container" aria-labelledby="menu-title">
-      <div><a class="back-link" href="index.html"><span aria-hidden="true">←</span> Zurück zu Lagano</a><p class="eyebrow">CAFE LAGANO · SINDELFINGEN</p><h1 id="menu-title">Was darf’s<br><em>sein?</em></h1><p class="hero-description">Kaffee, Balkan-Klassiker und Drinks für lange Nachmittage und noch längere Abende.</p></div>
+      <div class="menu-hero-copy"><a class="back-link" href="index.html">Zurück zu Lagano</a><h1 id="menu-title">Was darf’s sein?</h1><p class="hero-description">Kaffee, Balkan-Klassiker und Drinks für lange Nachmittage und noch längere Abende.</p></div>
       <!-- Temporary placeholder photography — replace with real Cafe Lagano photography before production. -->
-      <figure class="menu-hero-figure"><div class="photo"><img src="assets/images/placeholders/coffee-detail-1280.webp" srcset="assets/images/placeholders/coffee-detail-640.webp 640w, assets/images/placeholders/coffee-detail-1280.webp 1280w" sizes="(max-width: 767px) calc(100vw - 40px), 40vw" width="1280" height="1706" alt="Cappuccino auf einem Holztisch, von oben fotografiert" loading="eager" fetchpriority="high"></div><figcaption>In Ruhe aussuchen. In Ruhe genießen.</figcaption></figure>
+      <figure class="menu-hero-figure"><div class="photo"><img src="assets/images/placeholders/coffee-detail-1280.webp" srcset="assets/images/placeholders/coffee-detail-640.webp 640w, assets/images/placeholders/coffee-detail-1280.webp 1280w" sizes="(max-width: 767px) 90px, 240px" width="1280" height="1706" alt="Cappuccino auf einem Holztisch, von oben fotografiert" loading="eager" fetchpriority="high"></div></figure>
     </section>
     <div class="category-bar"><nav class="container category-nav" aria-label="Getränkekategorien">
       <!-- menu-navigation:start -->
@@ -919,11 +919,11 @@
 <!-- menu-navigation:end -->
     </nav></div>
     <div class="container menu-body">
-      <div class="menu-tools" hidden data-menu-tools><div class="menu-search-field"><label for="menu-search">Etwas Bestimmtes?</label><div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="menu-search" placeholder="Getränk suchen …" autocomplete="off" aria-controls="menu-container"><button class="search-clear" type="button" data-search-clear hidden aria-label="Suche löschen">×</button></div></div><p class="search-status" role="status" aria-live="polite" data-search-status>Die ganze Karte. Ganz entspannt.</p></div>
+      <div class="menu-tools" hidden data-menu-tools><div class="menu-search-field"><label class="sr-only" for="menu-search">Getränk suchen</label><div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="menu-search" placeholder="Getränk suchen …" autocomplete="off" aria-controls="menu-container"><button class="search-clear" type="button" data-search-clear hidden aria-label="Suche löschen">×</button></div></div><p class="search-status" role="status" aria-live="polite" data-search-status>Die ganze Karte mit Preisen.</p></div>
       <div id="menu-container">
         <!-- menu-content:start -->
 <div class="menu-grid"><section class="menu-section" id="warme-getraenke" aria-labelledby="category-0">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">01</span><h2 id="category-0">Warme Getränke</h2></div>
+  <div class="menu-section-heading"><h2 id="category-0">Warme Getränke</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Espresso</h3></div><span class="menu-item-price">2,50 €</span></li>
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Double Espresso</h3></div><span class="menu-item-price">2,80 €</span></li>
@@ -942,7 +942,7 @@
   </ul>
 </section>
 <section class="menu-section" id="alkoholfreie-getraenke" aria-labelledby="category-1">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">02</span><h2 id="category-1">Alkoholfreie Getränke</h2></div>
+  <div class="menu-section-heading"><h2 id="category-1">Alkoholfreie Getränke</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Teinacher still</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">2,00 €</span></li>
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Teinacher medium</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">2,00 €</span></li>
@@ -963,12 +963,12 @@
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Red Bull</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">4,50 €</span></li>
   </ul>
 </section></div>
-<aside class="menu-photo-break" aria-label="Eine kleine Pause">
+<figure class="menu-photo-break">
   <div class="photo"><img src="assets/images/placeholders/barista-1280.webp" srcset="assets/images/placeholders/barista-640.webp 640w, assets/images/placeholders/barista-1280.webp 1280w" sizes="(max-width: 767px) 100vw, 65vw" width="1280" height="848" alt="Milch wird in einen Cappuccino gegossen" loading="lazy" decoding="async"></div>
-  <div class="menu-break-copy"><span class="eyebrow">Ganz lagano</span><p>Zeit für eine<br>kleine Pause.</p><span>Und einen guten Kaffee.</span></div>
-</aside>
+  <figcaption class="menu-break-copy"><p>Zeit für eine kleine Pause.</p><span>Und einen guten Kaffee.</span></figcaption>
+</figure>
 <div class="menu-grid"><section class="menu-section" id="bier" aria-labelledby="category-2">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">03</span><h2 id="category-2">Bier</h2></div>
+  <div class="menu-section-heading"><h2 id="category-2">Bier</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Heineken</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Heineken Alkoholfrei</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
@@ -982,7 +982,7 @@
   </ul>
 </section>
 <section class="menu-section" id="weine" aria-labelledby="category-3">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">04</span><h2 id="category-3">Weine</h2></div>
+  <div class="menu-section-heading"><h2 id="category-3">Weine</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Rotwein</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,30 €</span></li>
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Weißwein</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,30 €</span></li>
@@ -994,12 +994,12 @@
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Prosseco</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,50 €</span></li>
   </ul>
 </section></div>
-<aside class="menu-photo-break menu-photo-break-evening" aria-label="Eine kleine Pause">
+<figure class="menu-photo-break menu-photo-break-evening">
   <div class="photo"><img src="assets/images/placeholders/drinks-1280.webp" srcset="assets/images/placeholders/drinks-640.webp 640w, assets/images/placeholders/drinks-1280.webp 1280w" sizes="(max-width: 767px) 100vw, 65vw" width="1280" height="1920" alt="Ein orangefarbener Aperitif auf einem Tisch im Tageslicht" loading="lazy" decoding="async"></div>
-  <div class="menu-break-copy"><span class="eyebrow">Ganz lagano</span><p>Noch ein Gespräch.<br>Noch ein Glas.</p><span>Der Nachmittag darf bleiben.</span></div>
-</aside>
+  <figcaption class="menu-break-copy"><p>Noch ein Gespräch. Noch ein Glas.</p><span>Der Nachmittag darf bleiben.</span></figcaption>
+</figure>
 <div class="menu-grid"><section class="menu-section menu-section-wide" id="flaschen" aria-labelledby="category-4">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">05</span><h2 id="category-4">Flaschen</h2></div>
+  <div class="menu-section-heading"><h2 id="category-4">Flaschen</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jack Daniel's</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">80,00 €</span></li>
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Chivas</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">90,00 €</span></li>
@@ -1022,7 +1022,7 @@
   </ul>
 </section>
 <section class="menu-section" id="shots" aria-labelledby="category-5">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">06</span><h2 id="category-5">Shots</h2></div>
+  <div class="menu-section-heading"><h2 id="category-5">Shots</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jäger</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
     <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Pelinkovac</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
@@ -1037,7 +1037,7 @@
   </ul>
 </section>
 <section class="menu-section" id="spirituosen" aria-labelledby="category-6">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">07</span><h2 id="category-6">Spirituosen</h2></div>
+  <div class="menu-section-heading"><h2 id="category-6">Spirituosen</h2></div>
   <ul class="menu-items">
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jack Daniel's</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,00 €</span></li>
     <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Chivas</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,00 €</span></li>
@@ -1050,10 +1050,10 @@
 </section></div>
 <!-- menu-content:end -->
       </div>
-      <div class="menu-empty" data-menu-empty hidden><span class="eyebrow">Nichts gefunden</span><h2>Lieber etwas anderes?</h2><p>Für diese Suche ist kein Getränk auf der Karte.</p><button type="button" class="button" data-search-reset>Die ganze Karte zeigen <span aria-hidden="true">↗</span></button></div>
+      <div class="menu-empty" data-menu-empty hidden><h2>Nichts gefunden.</h2><p>Für diese Suche ist kein Getränk auf der Karte.</p><button type="button" class="button" data-search-reset>Die ganze Karte zeigen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button></div>
       <p class="menu-note">Alle Preise in Euro. <span class="regional-key">Balkan-Klassiker</span> sind auf der Karte dezent hervorgehoben.</p>
     </div>
-    <section id="menu-visit" class="menu-visit section-space" aria-labelledby="menu-visit-title"><div class="container menu-visit-grid"><div><p class="eyebrow">Dein Platz am Marktplatz</p><h2 id="menu-visit-title">Jetzt fehlt<br><em>nur noch der Tisch.</em></h2></div><div><p>Komm vorbei und bleib ein bisschen.<br>Marktplatz, 71063 Sindelfingen.</p><a class="button" href="https://www.google.com/maps/dir/?api=1&amp;destination=Marktplatz,+71063+Sindelfingen" target="_blank" rel="noopener noreferrer">Route öffnen <span aria-hidden="true">↗</span><span class="sr-only"> (öffnet in neuem Tab)</span></a><a class="text-link" href="index.html#hours">Unsere Öffnungszeiten <span aria-hidden="true">↗</span></a></div></div></section>
+    <section id="menu-visit" class="menu-visit section-space" aria-labelledby="menu-visit-title"><div class="container menu-visit-grid"><div><h2 id="menu-visit-title">Jetzt fehlt nur noch der Tisch.</h2></div><div><p>Komm vorbei und bleib ein bisschen.<br>Marktplatz, 71063 Sindelfingen.</p><a class="button" href="https://www.google.com/maps/dir/?api=1&amp;destination=Marktplatz,+71063+Sindelfingen" target="_blank" rel="noopener noreferrer">Route öffnen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg><span class="sr-only"> (öffnet in neuem Tab)</span></a><a class="text-link" href="index.html#hours">Unsere Öffnungszeiten <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div></section>
   </main>
   <!-- shared-footer:start -->
 <footer class="site-footer" id="footer">
@@ -1063,16 +1063,16 @@
         <a class="wordmark footer-wordmark" href="index.html" aria-label="Cafe Lagano — Startseite"><span class="wordmark-kicker">CAFE</span><span>lagano</span></a>
         <p>Ein bisschen Balkan.<br>Ganz viel Lagano.</p>
       </div>
-      <div class="footer-address"><span class="eyebrow">Hier sind wir</span><address>Marktplatz<br>71063 Sindelfingen</address></div>
+      <div class="footer-address"><address>Marktplatz<br>71063 Sindelfingen</address></div>
       <nav class="footer-nav" aria-label="Footernavigation">
         <a href="index.html#about">Unsere Story</a>
         <a href="menu.html">Getränkekarte</a>
         <a href="index.html#hours">Öffnungszeiten</a>
         <a href="index.html#contact">Vorbeikommen</a>
       </nav>
-      <a class="text-link footer-route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Marktplatz,+71063+Sindelfingen" target="_blank" rel="noopener noreferrer">Route öffnen <span aria-hidden="true">↗</span><span class="sr-only"> (öffnet in neuem Tab)</span></a>
+      <a class="text-link footer-route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Marktplatz,+71063+Sindelfingen" target="_blank" rel="noopener noreferrer">Route öffnen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg><span class="sr-only"> (öffnet in neuem Tab)</span></a>
     </div>
-    <div class="footer-bottom"><p>© <span data-current-year>2026</span> Cafe Lagano</p><p>Kaffee. Freunde. Ganz lagano.</p><a href="#main-content">Nach oben <span aria-hidden="true">↑</span></a></div>
+    <div class="footer-bottom"><p>© <span data-current-year>2026</span> Cafe Lagano</p><p>Kaffee. Freunde. Ganz lagano.</p><a href="#main-content">Nach oben <svg class="arrow-icon arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></a></div>
   </div>
 </footer>
 <!-- shared-footer:end -->

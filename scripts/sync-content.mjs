@@ -14,7 +14,7 @@ const regional = new Set(['Cockta', 'Cedevita', 'Franck Cappuccino', 'Jelen', 'O
 
 function category(name, items, index) {
   return `<section class="menu-section${index === 4 ? ' menu-section-wide' : ''}" id="${ids[index]}" aria-labelledby="category-${index}">
-  <div class="menu-section-heading"><span class="section-index" aria-hidden="true">${String(index + 1).padStart(2, '0')}</span><h2 id="category-${index}">${escape(name)}</h2></div>
+  <div class="menu-section-heading"><h2 id="category-${index}">${escape(name)}</h2></div>
   <ul class="menu-items">
 ${items.map((item) => `    <li class="menu-item${regional.has(item.name) ? ' menu-item-regional' : ''}"><div class="menu-item-info"><h3 class="menu-item-name">${escape(item.name)}</h3>${item.description ? `<p class="menu-item-desc">${escape(item.description)}</p>` : ''}</div><span class="menu-item-price">${displayPrice(item.price)}</span></li>`).join('\n')}
   </ul>
@@ -22,10 +22,10 @@ ${items.map((item) => `    <li class="menu-item${regional.has(item.name) ? ' men
 }
 
 function photoBreak(image, alt, title, copy, second = false) {
-  return `<aside class="menu-photo-break${second ? ' menu-photo-break-evening' : ''}" aria-label="Eine kleine Pause">
+  return `<figure class="menu-photo-break${second ? ' menu-photo-break-evening' : ''}">
   <div class="photo"><img src="assets/images/placeholders/${image}-1280.webp" srcset="assets/images/placeholders/${image}-640.webp 640w, assets/images/placeholders/${image}-1280.webp 1280w" sizes="(max-width: 767px) 100vw, 65vw" width="1280" height="${second ? 1920 : 848}" alt="${alt}" loading="lazy" decoding="async"></div>
-  <div class="menu-break-copy"><span class="eyebrow">Ganz lagano</span><p>${title}</p><span>${copy}</span></div>
-</aside>`;
+  <figcaption class="menu-break-copy"><p>${title.replaceAll('<br>', ' ')}</p><span>${copy}</span></figcaption>
+</figure>`;
 }
 
 const categories = Object.entries(menu).map(([name, items], index) => category(name, items, index));
@@ -53,6 +53,12 @@ const replace = (source, marker, content) => {
   return source.replace(pattern, (_, start, end) => `${start}\n${content}\n${end}`);
 };
 
+const selection = ['Espresso', 'Cockta', 'Cedevita'].map((name) => {
+  const categoryIndex = Object.values(menu).findIndex((items) => items.some((item) => item.name === name));
+  const item = Object.values(menu)[categoryIndex].find((item) => item.name === name);
+  return `<li><a href="menu.html#${ids[categoryIndex]}"><span class="selection-name">${escape(item.name)}${item.description ? `<small>${escape(item.description)}</small>` : ''}</span><span class="selection-price">${displayPrice(item.price)}</span><svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></li>`;
+}).join('\n');
+
 const check = process.argv.includes('--check');
 let stale = false;
 for (const file of ['index.html', 'menu.html']) {
@@ -61,6 +67,7 @@ for (const file of ['index.html', 'menu.html']) {
   const header = read('partials/header.html').trim().replace('{{menu-current}}', isMenu ? 'aria-current="page"' : '').replace('{{visit-href}}', isMenu ? '#menu-visit' : '#contact');
   let output = replace(original, 'shared-header', header);
   output = replace(output, 'shared-footer', read('partials/footer.html').trim());
+  if (!isMenu) output = replace(output, 'home-selection', `<ul class="home-selection">\n${selection}\n</ul>`);
   if (isMenu) {
     output = replace(output, 'menu-navigation', nav);
     output = replace(output, 'menu-content', groups);
