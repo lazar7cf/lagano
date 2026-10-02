@@ -1,441 +1,160 @@
-/* 
-  Cafe Lagano - Main Menu Script
-  Handles: Dynamic Rendering, Accordion Interaction, Category Icons
-*/
+/* Shared progressive enhancements. Navigation and the entire menu work without JS. */
+(() => {
+  'use strict';
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  const header = document.querySelector('.site-header');
+  const toggle = document.querySelector('.nav-toggle');
+  const navigation = document.getElementById('site-navigation');
+  const mobile = window.matchMedia('(max-width: 767px)');
 
-const menuData = {
-    "Warme Getränke": [
-        { name: "Espresso", description: "", price: "2.50 €" },
-        { name: "Double Espresso", description: "", price: "2.80 €" },
-        { name: "Espresso Macchiato", description: "", price: "2.80 €" },
-        { name: "Tasse Kaffee", description: "", price: "2.80 €" },
-        { name: "Milch Kaffee", description: "", price: "3.00 €" },
-        { name: "Cappuccino", description: "", price: "3.50 €" },
-        { name: "Latte Macchiato", description: "", price: "3.50 €" },
-        { name: "Latte Macchiato", description: "Karamell, Vanille", price: "3.80 €" },
-        { name: "Franck Cappuccino", description: "", price: "3.50 €" },
-        { name: "Heiße Schokolade", description: "Schwarz/Weiss", price: "3.50 €" },
-        { name: "Frappé/Hladan Nescafé", description: "", price: "3.50 €" },
-        { name: "Tee", description: "", price: "2.60 €" },
-        { name: "Tee mit Rum", description: "", price: "3.50 €" },
-        { name: "Sahne", description: "", price: "+0.30 €" }
-    ],
-    "Alkoholfreie Getränke": [
-        { name: "Teinacher still", description: "0.20l", price: "2.00 €" },
-        { name: "Teinacher medium", description: "0.20l", price: "2.00 €" },
-        { name: "Coca Cola", description: "0.20l", price: "3.60 €" },
-        { name: "Coca Cola Zero", description: "0.20l", price: "3.60 €" },
-        { name: "Fanta", description: "0.20l", price: "3.60 €" },
-        { name: "Sprite", description: "0.20l", price: "3.60 €" },
-        { name: "Bitter Lemon", description: "0.20l", price: "3.60 €" },
-        { name: "Tonic Water", description: "0.20l", price: "3.60 €" },
-        { name: "Orangina", description: "0.25l", price: "3.60 €" },
-        { name: "Cockta", description: "0.25l", price: "4.00 €" },
-        { name: "Jana", description: "0.33l", price: "4.00 €" },
-        { name: "Cedevita", description: "0.20l", price: "3.60 €" },
-        { name: "Ice Tea", description: "0.33l", price: "3.60 €" },
-        { name: "Säfte (versch. Sorten)", description: "0.20l", price: "3.60 €" },
-        { name: "Necktare (versch. Sorten)", description: "0.20l", price: "3.60 €" },
-        { name: "Gepresster Orangensaft/Limonade", description: "0.25l", price: "3.60 €" },
-        { name: "Red Bull", description: "0.25l", price: "4.50 €" }
-    ],
-    "Bier": [
-        { name: "Heineken", description: "0.33l", price: "4.00 €" },
-        { name: "Heineken Alkoholfrei", description: "0.33l", price: "4.00 €" },
-        { name: "Stuttgarter Hofbräu", description: "0.50l", price: "3.80 €" },
-        { name: "Jelen", description: "0.33l", price: "4.00 €" },
-        { name: "Ozujsko", description: "0.33l", price: "4.00 €" },
-        { name: "Karlovacko", description: "0.33l", price: "4.00 €" },
-        { name: "Corona", description: "0.33l", price: "4.50 €" },
-        { name: "Desperados", description: "0.33l", price: "4.50 €" },
-        { name: "Radler", description: "0.33l", price: "4.00 €" }
-    ],
-    "Weine": [
-        { name: "Rotwein", description: "0.20l", price: "4.30 €" },
-        { name: "Weißwein", description: "0.20l", price: "4.30 €" },
-        { name: "Roséwein", description: "0.20l", price: "4.30 €" },
-        { name: "Weinschorle/Spricer", description: "0.25l", price: "4.30 €" },
-        { name: "Korea/Bambus", description: "0.25l", price: "4.30 €" },
-        { name: "Aperol Spritz", description: "0.25l", price: "6.00 €" },
-        { name: "Lillet", description: "0.25l", price: "6.00 €" },
-        { name: "Prosseco", description: "0.20l", price: "4.50 €" }
-    ],
-    "Flaschen": [
-        { name: "Jack Daniel's", description: "0.70l", price: "80.00 €" },
-        { name: "Chivas", description: "0.70l", price: "90.00 €" },
-        { name: "Stock", description: "0.70l", price: "70.00 €" },
-        { name: "Johnnie Walker", description: "0.70l", price: "70.00 €" },
-        { name: "Johnnie Black", description: "0.70l", price: "90.00 €" },
-        { name: "Vodka (Three Sixty, Smirnoff)", description: "0.70l", price: "80.00 €" },
-        { name: "Belvedere", description: "0.70l", price: "100.00 €" },
-        { name: "Gin Bombay", description: "0.70l", price: "80.00 €" },
-        { name: "Jäger", description: "0.70l", price: "70.00 €" },
-        { name: "Pelinkovac", description: "1.00l", price: "70.00 €" },
-        { name: "Grasevina", description: "1.00l", price: "30.00 €" },
-        { name: "Plavac", description: "1.00l", price: "30.00 €" },
-        { name: "Prossecco", description: "0.75l", price: "30.00 €" },
-        { name: "Moët", description: "0.75l", price: "100.00 €" },
-        { name: "Moët Ice", description: "0.75l", price: "120.00 €" },
-        { name: "Coca Cola", description: "1.00l", price: "5.00 €" },
-        { name: "Bitter Lemon/Tonic Water", description: "1.00l", price: "5.00 €" },
-        { name: "Mineral Wasser", description: "0.70l", price: "5.00 €" }
-    ],
-    "Shots": [
-        { name: "Jäger", description: "2cl", price: "3.00 €" },
-        { name: "Pelinkovac", description: "2cl", price: "3.00 €" },
-        { name: "Ramazzotti", description: "2cl", price: "3.00 €" },
-        { name: "Rakija", description: "2cl", price: "3.00 €" },
-        { name: "Ficken", description: "2cl", price: "3.00 €" },
-        { name: "Havana", description: "2cl", price: "3.00 €" },
-        { name: "Bacardi", description: "2cl", price: "3.00 €" },
-        { name: "Tequila", description: "2cl", price: "3.00 €" },
-        { name: "Baylies", description: "2cl", price: "3.00 €" },
-        { name: "Captain Morgan", description: "2cl", price: "3.00 €" }
-    ],
-    "Spirituosen": [
-        { name: "Jack Daniel's", description: "4cl", price: "6.00 €" },
-        { name: "Chivas", description: "4cl", price: "6.00 €" },
-        { name: "Johnnie Walker", description: "4cl", price: "5.50 €" },
-        { name: "Johnnie Black", description: "4cl", price: "6.50 €" },
-        { name: "Vodka", description: "4cl", price: "6.00 €" },
-        { name: "Stock", description: "4cl", price: "5.00 €" },
-        { name: "Gin Bombay", description: "4cl", price: "6.00 €" }
-    ]
-};
-
-// Category icons mapping
-const categoryIcons = {
-    "Warme Getränke": "icon-coffee.svg",
-    "Alkoholfreie Getränke": "soda-glass-bottle-icon.svg",
-    "Bier": "beer-mug-icon.svg",
-    "Weine": "wine-bottle-glass-icon.svg",
-    "Flaschen": "glass-bottles-icon.svg",
-    "Shots": "cocktail-drink-glass-icon.svg",
-    "Spirituosen": "icon-cocktail.svg"
-};
-
-// Fallback icon
-const universalIcon = "icon-plus.svg";
-
-document.addEventListener('DOMContentLoaded', () => {
-    const container = document.getElementById('menu-container');
-    if (!container) return;
-
-    renderMenu(container);
-});
-
-function renderMenu(container) {
-    container.innerHTML = '';
-
-    Object.keys(menuData).forEach((category, index) => {
-        const section = document.createElement('div');
-        section.className = 'menu-section';
-
-        const iconPath = categoryIcons[category] || universalIcon;
-        section.innerHTML = `
-            <div class="menu-category-header" onclick="toggleCategory(this)" role="button" tabindex="0" aria-expanded="false" aria-label="${category} ${menuData[category].length} Artikel">
-                <div class="category-title-wrap">
-                    <img src="assets/images/${iconPath}" class="category-icon" alt="" aria-hidden="true">
-                    <h2 class="menu-category-title">${category} <span class="item-count">(${menuData[category].length})</span></h2>
-                </div>
-                <span class="menu-toggle-icon" aria-hidden="true">▾</span>
-            </div>
-            <div class="menu-items-container">
-                <div class="menu-items-list">
-                    ${menuData[category].map(item => `
-                        <div class="menu-item">
-                            <div class="menu-item-info">
-                                <h3 class="menu-item-name">${item.name}</h3>
-                                ${item.description ? `<p class="menu-item-desc">${item.description}</p>` : ''}
-                            </div>
-                            <div class="menu-item-price">${item.price}</div>
-                        </div>
-                    `).join('')}
-                </div>
-            </div>
-        `;
-
-        container.appendChild(section);
-    });
-}
-
-function toggleCategory(header) {
-    const section = header.parentElement;
-    const isActive = section.classList.contains('active');
-
-    // Close all other sections
-    document.querySelectorAll('.menu-section').forEach(s => {
-        s.classList.remove('active');
-    });
-
-    if (!isActive) {
-        section.classList.add('active');
-        header.setAttribute('aria-expanded', 'true');
-    } else {
-        header.setAttribute('aria-expanded', 'false');
-    }
-}
-
-// Keyboard navigation for menu accordion
-document.addEventListener('DOMContentLoaded', () => {
-    // Wait for menu to be rendered
-    setTimeout(() => {
-        document.querySelectorAll('.menu-category-header').forEach(header => {
-            header.setAttribute('role', 'button');
-            header.setAttribute('tabindex', '0');
-            header.setAttribute('aria-expanded', 'false');
-            
-            header.addEventListener('keydown', (e) => {
-                if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault();
-                    toggleCategory(header);
-                }
-            });
-        });
-    }, 100);
-});
-
-// Menu search functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const searchInput = document.getElementById('menu-search');
-    if (!searchInput) return;
-
-    searchInput.addEventListener('input', (e) => {
-        const searchTerm = e.target.value.toLowerCase().trim();
-        filterMenu(searchTerm);
-    });
-});
-
-function filterMenu(searchTerm) {
-    const menuItems = document.querySelectorAll('.menu-item');
-    const menuSections = document.querySelectorAll('.menu-section');
-    
-    if (!searchTerm) {
-        // Show all items and sections
-        menuItems.forEach(item => {
-            item.classList.remove('hidden');
-            item.closest('.menu-section')?.classList.remove('hidden');
-        });
-        menuSections.forEach(section => section.classList.remove('hidden'));
-        return;
-    }
-
-    let hasVisibleItems = false;
-    
-    menuSections.forEach(section => {
-        const items = section.querySelectorAll('.menu-item');
-        let sectionHasVisibleItems = false;
-        
-        items.forEach(item => {
-            const itemName = item.querySelector('.menu-item-name')?.textContent.toLowerCase() || '';
-            const itemDesc = item.querySelector('.menu-item-desc')?.textContent.toLowerCase() || '';
-            
-            if (itemName.includes(searchTerm) || itemDesc.includes(searchTerm)) {
-                item.classList.remove('hidden');
-                sectionHasVisibleItems = true;
-                hasVisibleItems = true;
-            } else {
-                item.classList.add('hidden');
-            }
-        });
-        
-        if (sectionHasVisibleItems) {
-            section.classList.remove('hidden');
-            // Auto-expand sections with matches
-            if (!section.classList.contains('active')) {
-                section.classList.add('active');
-                const header = section.querySelector('.menu-category-header');
-                if (header) header.setAttribute('aria-expanded', 'true');
-            }
-        } else {
-            section.classList.add('hidden');
-        }
-    });
-}
-
-// Expand/Collapse All functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const expandAllBtn = document.getElementById('expand-all');
-    const collapseAllBtn = document.getElementById('collapse-all');
-    
-    if (expandAllBtn) {
-        expandAllBtn.addEventListener('click', () => {
-            document.querySelectorAll('.menu-section').forEach(section => {
-                section.classList.add('active');
-                const header = section.querySelector('.menu-category-header');
-                if (header) header.setAttribute('aria-expanded', 'true');
-            });
-        });
-    }
-    
-    if (collapseAllBtn) {
-        collapseAllBtn.addEventListener('click', () => {
-            document.querySelectorAll('.menu-section').forEach(section => {
-                section.classList.remove('active');
-                const header = section.querySelector('.menu-category-header');
-                if (header) header.setAttribute('aria-expanded', 'false');
-            });
-        });
-    }
-});
-
-/* 
-  Mobile Hamburger Menu Functionality
-  Handles: Toggle menu, close on link click, close on outside click, prevent body scroll
-*/
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const mobileMenu = document.querySelector('.nav-links-mobile');
-    const mobileLinks = document.querySelectorAll('.nav-links-mobile a');
-    const navbar = document.querySelector('.navbar');
-    const body = document.body;
-
-    // Only initialize if hamburger exists (mobile view)
-    if (!hamburger || !mobileMenu) return;
-
-    // Calculate navbar height and position menu below it
-    function updateMenuPosition() {
-        if (navbar) {
-            const navbarHeight = navbar.offsetHeight;
-            const navbarTop = navbar.getBoundingClientRect().top + window.scrollY;
-            mobileMenu.style.top = (navbarTop + navbarHeight) + 'px';
-            mobileMenu.style.maxHeight = `calc(100vh - ${navbarTop + navbarHeight}px)`;
-        }
-    }
-
-    // Update position on load and resize
-    updateMenuPosition();
-    window.addEventListener('resize', updateMenuPosition);
-
-    // Toggle menu function
-    function toggleMenu() {
-        const isOpen = hamburger.classList.contains('active');
-        
-        if (isOpen) {
-            closeMenu();
-        } else {
-            openMenu();
-        }
-    }
-
-    // Open menu
-    function openMenu() {
-        updateMenuPosition(); // Update position before opening
-        hamburger.classList.add('active');
-        hamburger.setAttribute('aria-expanded', 'true');
-        mobileMenu.classList.add('active');
-        // Prevent body scroll
-        body.classList.add('menu-open');
-    }
-
-    // Close menu
-    function closeMenu() {
-        hamburger.classList.remove('active');
-        hamburger.setAttribute('aria-expanded', 'false');
-        mobileMenu.classList.remove('active');
-        // Restore body scroll
-        body.classList.remove('menu-open');
-    }
-
-    // Toggle menu on hamburger click
-    hamburger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        toggleMenu();
-    });
-
-    // Close menu when a link is clicked
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            closeMenu();
-        });
-    });
-
-    // Close menu when clicking outside (on document)
-    document.addEventListener('click', (e) => {
-        // Check if menu is open and click is outside menu and hamburger
-        if (mobileMenu.classList.contains('active') && 
-            !mobileMenu.contains(e.target) && 
-            !hamburger.contains(e.target)) {
-            closeMenu();
-        }
-    });
-
-    // Close menu on window resize if switching to desktop view
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768 && mobileMenu.classList.contains('active')) {
-            closeMenu();
-        }
-    });
-});
-
-
-/* 
-  Open Now Status Indicator
-*/
-document.addEventListener('DOMContentLoaded', () => {
-    const statusIndicator = document.querySelector('.status-indicator');
-    const statusText = document.querySelector('.status-text');
-    
-    if (!statusIndicator || !statusText) return;
-
-    function updateOpenStatus() {
-        const now = new Date();
-        const day = now.getDay(); // 0 = Sunday, 1 = Monday, etc.
-        const hour = now.getHours();
-        const minute = now.getMinutes();
-        const currentTime = hour * 60 + minute;
-
-        let isOpen = false;
-        let nextOpenTime = '';
-
-        // Opening hours: Mo-Do: 09:00-22:00, Fr-Sa: 09:00-23:00, So: 10:00-21:00
-        if (day === 0) { // Sunday
-            isOpen = currentTime >= 600 && currentTime < 1260; // 10:00 - 21:00
-            if (!isOpen && currentTime < 600) nextOpenTime = 'Heute um 10:00';
-            else if (!isOpen) nextOpenTime = 'Morgen um 10:00';
-        } else if (day >= 1 && day <= 4) { // Monday - Thursday
-            isOpen = currentTime >= 540 && currentTime < 1320; // 09:00 - 22:00
-            if (!isOpen && currentTime < 540) nextOpenTime = 'Heute um 09:00';
-            else if (!isOpen) nextOpenTime = 'Morgen um 09:00';
-        } else if (day === 5 || day === 6) { // Friday - Saturday
-            isOpen = currentTime >= 540 && currentTime < 1380; // 09:00 - 23:00
-            if (!isOpen && currentTime < 540) nextOpenTime = 'Heute um 09:00';
-            else if (!isOpen) nextOpenTime = 'Morgen um 09:00';
-        }
-
-        if (isOpen) {
-            statusIndicator.classList.remove('closed');
-            statusText.textContent = 'Jetzt geöffnet';
-        } else {
-            statusIndicator.classList.add('closed');
-            statusText.textContent = `Geschlossen • ${nextOpenTime}`;
-        }
-    }
-
-    updateOpenStatus();
-    // Update every minute
-    setInterval(updateOpenStatus, 60000);
-});
-
-/* 
-  Scroll-triggered Animations
-*/
-document.addEventListener('DOMContentLoaded', () => {
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+  if (header && toggle && navigation) {
+    header.classList.add('nav-enhanced');
+    const setOpen = (open, restoreFocus = false) => {
+      toggle.setAttribute('aria-expanded', String(open));
+      toggle.setAttribute('aria-label', open ? 'Navigation schließen' : 'Navigation öffnen');
+      navigation.hidden = mobile.matches && !open;
+      if (restoreFocus) toggle.focus();
     };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, observerOptions);
-
-    // Observe all elements with fade-in-up class
-    document.querySelectorAll('.fade-in-up').forEach(el => {
-        observer.observe(el);
+    const syncNavigation = () => {
+      toggle.hidden = !mobile.matches;
+      setOpen(false);
+    };
+    syncNavigation();
+    mobile.addEventListener('change', syncNavigation);
+    toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+    navigation.addEventListener('click', (event) => {
+      if (event.target.closest('a')) setOpen(false);
     });
-});
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') setOpen(false, true);
+    });
+    document.addEventListener('click', (event) => {
+      if (!header.contains(event.target)) setOpen(false);
+    });
+    header.addEventListener('focusout', (event) => {
+      if (event.relatedTarget && !header.contains(event.relatedTarget)) setOpen(false);
+    });
+  }
+
+  document.querySelectorAll('[data-current-year]').forEach((element) => {
+    element.textContent = String(new Date().getFullYear());
+  });
+
+  // Existing hours, evaluated in the café's timezone, including DST and next-day opening.
+  const status = document.querySelector('[data-open-status]');
+  if (status) {
+    const hours = {
+      Sun: [600, 1260], Mon: [540, 1320], Tue: [540, 1320], Wed: [540, 1320],
+      Thu: [540, 1320], Fri: [540, 1380], Sat: [540, 1380]
+    };
+    const weekdays = Object.keys(hours);
+    const formatter = new Intl.DateTimeFormat('en-GB', {
+      timeZone: 'Europe/Berlin', weekday: 'short', hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+    });
+    const updateStatus = () => {
+      const parts = Object.fromEntries(formatter.formatToParts(new Date()).map((part) => [part.type, part.value]));
+      const minutes = Number(parts.hour) * 60 + Number(parts.minute);
+      const [opens, closes] = hours[parts.weekday];
+      const open = minutes >= opens && minutes < closes;
+      const tomorrow = weekdays[(weekdays.indexOf(parts.weekday) + 1) % 7];
+      const next = minutes < opens ? opens : hours[tomorrow][0];
+      const time = `${String(Math.floor(next / 60)).padStart(2, '0')}:${String(next % 60).padStart(2, '0')}`;
+      status.classList.toggle('is-closed', !open);
+      status.querySelector('[data-status-text]').textContent = open
+        ? `Jetzt geöffnet · bis ${String(Math.floor(closes / 60)).padStart(2, '0')}:00 Uhr`
+        : `Geschlossen · ${minutes < opens ? 'heute' : 'morgen'} ab ${time} Uhr`;
+      status.hidden = false;
+    };
+    updateStatus();
+    setInterval(updateStatus, 60000);
+  }
+
+  const search = document.getElementById('menu-search');
+  const sections = [...document.querySelectorAll('.menu-section')];
+  const categoryLinks = [...document.querySelectorAll('.category-nav a')];
+  const categoryNav = document.querySelector('.category-nav');
+  if (!search || !sections.length) return;
+
+  const tools = document.querySelector('[data-menu-tools]');
+  const clear = document.querySelector('[data-search-clear]');
+  const empty = document.querySelector('[data-menu-empty]');
+  const resultStatus = document.querySelector('[data-search-status]');
+  const photos = [...document.querySelectorAll('.menu-photo-break')];
+  const note = document.querySelector('.menu-note');
+  const normalize = (value) => value.toLocaleLowerCase('de-DE').normalize('NFD').replace(/[\u0300-\u036f]/g, '').replaceAll('ß', 'ss');
+  const entries = sections.map((section) => ({ section, items: [...section.querySelectorAll('.menu-item')].map((item) => ({ item, text: normalize(item.querySelector('.menu-item-info').textContent) })) }));
+  tools.hidden = false;
+
+  const setActiveCategory = (id) => {
+    categoryLinks.forEach((link) => {
+      if (link.hash === `#${id}`) link.setAttribute('aria-current', 'location');
+      else link.removeAttribute('aria-current');
+    });
+    const active = categoryLinks.find((link) => link.hash === `#${id}`);
+    if (!active) return;
+    const offset = active.getBoundingClientRect().left - categoryNav.getBoundingClientRect().left + categoryNav.scrollLeft;
+    if (offset < categoryNav.scrollLeft || offset + active.offsetWidth > categoryNav.scrollLeft + categoryNav.clientWidth) {
+      categoryNav.scrollTo({ left: offset - 20, behavior: reducedMotion.matches ? 'instant' : 'smooth' });
+    }
+  };
+
+  const filterMenu = () => {
+    const term = normalize(search.value.trim());
+    let total = 0;
+    entries.forEach(({ section, items }) => {
+      let visible = 0;
+      items.forEach(({ item, text }) => {
+        item.hidden = Boolean(term) && !text.includes(term);
+        if (!item.hidden) visible += 1;
+      });
+      section.hidden = visible === 0;
+      total += visible;
+    });
+    document.querySelectorAll('.menu-grid').forEach((grid) => {
+      grid.hidden = ![...grid.querySelectorAll('.menu-section')].some((section) => !section.hidden);
+    });
+    photos.forEach((photo) => { photo.hidden = Boolean(term); });
+    note.hidden = total === 0;
+    clear.hidden = !search.value;
+    empty.hidden = total !== 0;
+    resultStatus.textContent = term ? `${total} ${total === 1 ? 'Getränk gefunden' : 'Getränke gefunden'}` : 'Die ganze Karte. Ganz entspannt.';
+    const firstVisible = sections.find((section) => !section.hidden);
+    setActiveCategory(firstVisible?.id);
+  };
+  search.addEventListener('input', filterMenu);
+  const resetSearch = () => { search.value = ''; filterMenu(); search.focus({ preventScroll: true }); };
+  clear.addEventListener('click', resetSearch);
+  document.querySelector('[data-search-reset]').addEventListener('click', resetSearch);
+  search.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && search.value) { event.preventDefault(); resetSearch(); }
+  });
+
+  // An anchor always opens the complete category, even after a search.
+  categoryLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (search.value) { search.value = ''; filterMenu(); }
+      setActiveCategory(link.hash.slice(1));
+    });
+  });
+
+  // Observe only a short reading band below the two sticky bars.
+  if ('IntersectionObserver' in window) {
+    let observer;
+    const observeCategories = () => {
+      observer?.disconnect();
+      const stickyHeight = header.offsetHeight + document.querySelector('.category-bar').offsetHeight;
+      observer = new IntersectionObserver((observations) => {
+        const visible = observations.filter((observation) => observation.isIntersecting && !observation.target.hidden);
+        const current = visible.find((observation) => `#${observation.target.id}` === window.location.hash) || visible[0];
+        if (current) setActiveCategory(current.target.id);
+      }, { rootMargin: `-${stickyHeight + 8}px 0px -${Math.max(0, window.innerHeight - stickyHeight - 150)}px 0px`, threshold: 0 });
+      sections.forEach((section) => observer.observe(section));
+    };
+    observeCategories();
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(observeCategories, 150);
+    });
+  }
+})();
