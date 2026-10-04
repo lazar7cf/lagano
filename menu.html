@@ -1,1080 +1,129 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#F2EEE6">
-  <meta name="description" content="Die Getränkekarte von Cafe Lagano am Marktplatz in Sindelfingen: Kaffee, Cockta, Cedevita, Bier, Weine, Flaschen, Shots und Spirituosen mit Preisen.">
-  <meta property="og:title" content="Getränkekarte | Cafe Lagano Sindelfingen">
-  <meta property="og:description" content="Kaffee, Balkan-Klassiker und Drinks für lange Nachmittage. Die ganze Karte mit Preisen.">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="de_DE">
-  <title>Getränkekarte | Cafe Lagano Sindelfingen</title>
-  <link rel="preload" href="assets/fonts/instrument-serif-normal-400-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="assets/fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="assets/fonts/fonts.css">
-  <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
-  <!-- menu-schema:start -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Menu",
-  "name": "Getränkekarte Cafe Lagano",
-  "hasMenuSection": [
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Getränkekarte von Cafe Lagano - Premium Kaffee, Balkan Klassiker, Bier, Wein, Cocktails und mehr. Entdecken Sie unsere ausgewählten Spezialitäten.">
+    <meta property="og:title" content="Getränkekarte | Cafe Lagano">
+    <meta property="og:description" content="Ausgewählte Spezialitäten von Cafe Lagano - Premium Kaffee bis Balkan Klassiker.">
+    <meta property="og:type" content="website">
+    <title>Getränkekarte | Cafe Lagano</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="application/ld+json">
     {
-      "@type": "MenuSection",
-      "name": "Warme Getränke",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Espresso",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Double Espresso",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.80",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Espresso Macchiato",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.80",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Tasse Kaffee",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.80",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Milch Kaffee",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Cappuccino",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Latte Macchiato",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Latte Macchiato",
-          "description": "Karamell, Vanille",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.80",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Franck Cappuccino",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Heiße Schokolade",
-          "description": "Schwarz/Weiss",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Frappé/Hladan Nescafé",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Tee",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Tee mit Rum",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Sahne"
-        }
-      ]
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Alkoholfreie Getränke",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Teinacher still",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Teinacher medium",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "2.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Coca Cola",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Coca Cola Zero",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Fanta",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Sprite",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Bitter Lemon",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Tonic Water",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Orangina",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Cockta",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Jana",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Cedevita",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Ice Tea",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Säfte (versch. Sorten)",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Necktare (versch. Sorten)",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Gepresster Orangensaft/Limonade",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.60",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Red Bull",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.50",
-            "priceCurrency": "EUR"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Bier",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Heineken",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Heineken Alkoholfrei",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Stuttgarter Hofbräu",
-          "description": "0.50l",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.80",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Jelen",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Ozujsko",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Karlovacko",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Corona",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Desperados",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Radler",
-          "description": "0.33l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.00",
-            "priceCurrency": "EUR"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Weine",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Rotwein",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.30",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Weißwein",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.30",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Roséwein",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.30",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Weinschorle/Spricer",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.30",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Korea/Bambus",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.30",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Aperol Spritz",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Lillet",
-          "description": "0.25l",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Prosseco",
-          "description": "0.20l",
-          "offers": {
-            "@type": "Offer",
-            "price": "4.50",
-            "priceCurrency": "EUR"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Flaschen",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Jack Daniel's",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "80.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Chivas",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "90.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Stock",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "70.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Johnnie Walker",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "70.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Johnnie Black",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "90.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Vodka (Three Sixty, Smirnoff)",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "80.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Belvedere",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "100.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Gin Bombay",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "80.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Jäger",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "70.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Pelinkovac",
-          "description": "1.00l",
-          "offers": {
-            "@type": "Offer",
-            "price": "70.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Grasevina",
-          "description": "1.00l",
-          "offers": {
-            "@type": "Offer",
-            "price": "30.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Plavac",
-          "description": "1.00l",
-          "offers": {
-            "@type": "Offer",
-            "price": "30.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Prossecco",
-          "description": "0.75l",
-          "offers": {
-            "@type": "Offer",
-            "price": "30.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Moët",
-          "description": "0.75l",
-          "offers": {
-            "@type": "Offer",
-            "price": "100.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Moët Ice",
-          "description": "0.75l",
-          "offers": {
-            "@type": "Offer",
-            "price": "120.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Coca Cola",
-          "description": "1.00l",
-          "offers": {
-            "@type": "Offer",
-            "price": "5.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Bitter Lemon/Tonic Water",
-          "description": "1.00l",
-          "offers": {
-            "@type": "Offer",
-            "price": "5.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Mineral Wasser",
-          "description": "0.70l",
-          "offers": {
-            "@type": "Offer",
-            "price": "5.00",
-            "priceCurrency": "EUR"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Shots",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Jäger",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Pelinkovac",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Ramazzotti",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Rakija",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Ficken",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Havana",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Bacardi",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Tequila",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Baylies",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Captain Morgan",
-          "description": "2cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "3.00",
-            "priceCurrency": "EUR"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "MenuSection",
-      "name": "Spirituosen",
-      "hasMenuItem": [
-        {
-          "@type": "MenuItem",
-          "name": "Jack Daniel's",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Chivas",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Johnnie Walker",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "5.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Johnnie Black",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.50",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Vodka",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Stock",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "5.00",
-            "priceCurrency": "EUR"
-          }
-        },
-        {
-          "@type": "MenuItem",
-          "name": "Gin Bombay",
-          "description": "4cl",
-          "offers": {
-            "@type": "Offer",
-            "price": "6.00",
-            "priceCurrency": "EUR"
-          }
+      "@context": "https://schema.org",
+      "@type": "Menu",
+      "name": "Getränkekarte Cafe Lagano",
+      "description": "Ausgewählte Spezialitäten von Cafe Lagano - Premium Kaffee, Balkan Klassiker, Bier, Wein, Cocktails und mehr",
+      "hasMenuSection": [
+        {
+          "@type": "MenuSection",
+          "name": "Warme Getränke",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Espresso", "offers": {"@type": "Offer", "price": "2.50", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Cappuccino", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Latte Macchiato", "offers": {"@type": "Offer", "price": "3.50", "priceCurrency": "EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Alkoholfreie Getränke",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Cockta", "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Cedevita", "offers": {"@type": "Offer", "price": "3.60", "priceCurrency": "EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Bier",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Jelen", "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Heineken", "offers": {"@type": "Offer", "price": "4.00", "priceCurrency": "EUR"}}
+          ]
+        },
+        {
+          "@type": "MenuSection",
+          "name": "Weine",
+          "hasMenuItem": [
+            {"@type": "MenuItem", "name": "Rotwein", "offers": {"@type": "Offer", "price": "4.30", "priceCurrency": "EUR"}},
+            {"@type": "MenuItem", "name": "Weißwein", "offers": {"@type": "Offer", "price": "4.30", "priceCurrency": "EUR"}}
+          ]
         }
       ]
     }
-  ]
-}
-</script>
-<!-- menu-schema:end -->
+    </script>
 </head>
-<body class="menu-page">
-  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
-  <!-- shared-header:start -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="wordmark" href="index.html" aria-label="Cafe Lagano — Startseite"><span class="wordmark-kicker">CAFE</span><span>lagano</span></a>
-    <span class="header-place">Marktplatz · Sindelfingen</span>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Navigation öffnen" hidden>
-      <span class="nav-toggle-label">Navigation</span><span class="nav-toggle-lines" aria-hidden="true"><span></span><span></span></span>
-    </button>
-    <nav id="site-navigation" class="site-navigation" aria-label="Hauptnavigation">
-      <a href="index.html#about">Story</a>
-      <a href="menu.html" aria-current="page">Getränke</a>
-      <a href="index.html#hours">Öffnungszeiten</a>
-      <a class="header-cta" href="#menu-visit">Vorbeikommen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
+
+<body>
+
+    <a href="#main-content" class="skip-to-content">Zum Hauptinhalt springen</a>
+
+    <nav class="container navbar">
+        <a href="index.html" class="nav-logo">LAGANO</a>
+        <!-- Hamburger button for mobile (hidden on desktop) -->
+        <button class="hamburger" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu">
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+            <span class="hamburger-line" aria-hidden="true"></span>
+        </button>
+        <!-- Desktop navigation (hidden on mobile) -->
+        <ul class="nav-links">
+            <li><a href="index.html#about">Über Uns</a></li>
+            <li><a href="menu.html" style="opacity: 1; border-bottom: 1px solid currentColor;">Getränke</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
+        <!-- Mobile navigation menu (hidden by default, shown when hamburger is clicked) -->
+        <ul class="nav-links-mobile" id="mobile-menu" role="menu">
+            <li><a href="index.html#about">Über Uns</a></li>
+            <li><a href="menu.html" style="opacity: 1; border-bottom: 1px solid currentColor;">Getränke</a></li>
+            <li><a href="index.html#contact">Kontakt</a></li>
+        </ul>
     </nav>
-  </div>
-</header>
-<!-- shared-header:end -->
-  <main id="main-content" tabindex="-1">
-    <section class="menu-hero container" aria-labelledby="menu-title">
-      <div class="menu-hero-copy"><a class="back-link" href="index.html">Zurück zu Lagano</a><h1 id="menu-title">Was darf’s sein?</h1><p class="hero-description">Kaffee, Balkan-Klassiker und Drinks für lange Nachmittage und noch längere Abende.</p></div>
-      <!-- Temporary placeholder photography — replace with real Cafe Lagano photography before production. -->
-      <figure class="menu-hero-figure"><div class="photo"><img src="assets/images/placeholders/coffee-detail-1280.webp" srcset="assets/images/placeholders/coffee-detail-640.webp 640w, assets/images/placeholders/coffee-detail-1280.webp 1280w" sizes="(max-width: 767px) 90px, 240px" width="1280" height="1706" alt="Cappuccino auf einem Holztisch, von oben fotografiert" loading="eager" fetchpriority="high"></div></figure>
-    </section>
-    <div class="category-bar"><nav class="container category-nav" aria-label="Getränkekategorien">
-      <!-- menu-navigation:start -->
-<a href="#warme-getraenke" aria-current="location">Warme Getränke</a>
-<a href="#alkoholfreie-getraenke">Alkoholfreie Getränke</a>
-<a href="#bier">Bier</a>
-<a href="#weine">Weine</a>
-<a href="#flaschen">Flaschen</a>
-<a href="#shots">Shots</a>
-<a href="#spirituosen">Spirituosen</a>
-<!-- menu-navigation:end -->
-    </nav></div>
-    <div class="container menu-body">
-      <div class="menu-tools" hidden data-menu-tools><div class="menu-search-field"><label class="sr-only" for="menu-search">Getränk suchen</label><div class="search-input-wrap"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="10.5" cy="10.5" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input type="search" id="menu-search" placeholder="Getränk suchen …" autocomplete="off" aria-controls="menu-container"><button class="search-clear" type="button" data-search-clear hidden aria-label="Suche löschen">×</button></div></div><p class="search-status" role="status" aria-live="polite" data-search-status>Die ganze Karte mit Preisen.</p></div>
-      <div id="menu-container">
-        <!-- menu-content:start -->
-<div class="menu-grid"><section class="menu-section" id="warme-getraenke" aria-labelledby="category-0">
-  <div class="menu-section-heading"><h2 id="category-0">Warme Getränke</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Espresso</h3></div><span class="menu-item-price">2,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Double Espresso</h3></div><span class="menu-item-price">2,80 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Espresso Macchiato</h3></div><span class="menu-item-price">2,80 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Tasse Kaffee</h3></div><span class="menu-item-price">2,80 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Milch Kaffee</h3></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Cappuccino</h3></div><span class="menu-item-price">3,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Latte Macchiato</h3></div><span class="menu-item-price">3,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Latte Macchiato</h3><p class="menu-item-desc">Karamell, Vanille</p></div><span class="menu-item-price">3,80 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Franck Cappuccino</h3></div><span class="menu-item-price">3,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Heiße Schokolade</h3><p class="menu-item-desc">Schwarz/Weiss</p></div><span class="menu-item-price">3,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Frappé/Hladan Nescafé</h3></div><span class="menu-item-price">3,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Tee</h3></div><span class="menu-item-price">2,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Tee mit Rum</h3></div><span class="menu-item-price">3,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Sahne</h3></div><span class="menu-item-price">+0,30 €</span></li>
-  </ul>
-</section>
-<section class="menu-section" id="alkoholfreie-getraenke" aria-labelledby="category-1">
-  <div class="menu-section-heading"><h2 id="category-1">Alkoholfreie Getränke</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Teinacher still</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">2,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Teinacher medium</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">2,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Coca Cola</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Coca Cola Zero</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Fanta</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Sprite</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Bitter Lemon</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Tonic Water</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Orangina</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Cockta</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jana</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Cedevita</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Ice Tea</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Säfte (versch. Sorten)</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Necktare (versch. Sorten)</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Gepresster Orangensaft/Limonade</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">3,60 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Red Bull</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">4,50 €</span></li>
-  </ul>
-</section></div>
-<figure class="menu-photo-break">
-  <div class="photo"><img src="assets/images/placeholders/barista-1280.webp" srcset="assets/images/placeholders/barista-640.webp 640w, assets/images/placeholders/barista-1280.webp 1280w" sizes="(max-width: 767px) 100vw, 65vw" width="1280" height="848" alt="Milch wird in einen Cappuccino gegossen" loading="lazy" decoding="async"></div>
-  <figcaption class="menu-break-copy"><p>Zeit für eine kleine Pause.</p><span>Und einen guten Kaffee.</span></figcaption>
-</figure>
-<div class="menu-grid"><section class="menu-section" id="bier" aria-labelledby="category-2">
-  <div class="menu-section-heading"><h2 id="category-2">Bier</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Heineken</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Heineken Alkoholfrei</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Stuttgarter Hofbräu</h3><p class="menu-item-desc">0.50l</p></div><span class="menu-item-price">3,80 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Jelen</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Ozujsko</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Karlovacko</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Corona</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Desperados</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Radler</h3><p class="menu-item-desc">0.33l</p></div><span class="menu-item-price">4,00 €</span></li>
-  </ul>
-</section>
-<section class="menu-section" id="weine" aria-labelledby="category-3">
-  <div class="menu-section-heading"><h2 id="category-3">Weine</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Rotwein</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,30 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Weißwein</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,30 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Roséwein</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,30 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Weinschorle/Spricer</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">4,30 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Korea/Bambus</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">4,30 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Aperol Spritz</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">6,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Lillet</h3><p class="menu-item-desc">0.25l</p></div><span class="menu-item-price">6,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Prosseco</h3><p class="menu-item-desc">0.20l</p></div><span class="menu-item-price">4,50 €</span></li>
-  </ul>
-</section></div>
-<figure class="menu-photo-break menu-photo-break-evening">
-  <div class="photo"><img src="assets/images/placeholders/drinks-1280.webp" srcset="assets/images/placeholders/drinks-640.webp 640w, assets/images/placeholders/drinks-1280.webp 1280w" sizes="(max-width: 767px) 100vw, 65vw" width="1280" height="1920" alt="Ein orangefarbener Aperitif auf einem Tisch im Tageslicht" loading="lazy" decoding="async"></div>
-  <figcaption class="menu-break-copy"><p>Noch ein Gespräch. Noch ein Glas.</p><span>Der Nachmittag darf bleiben.</span></figcaption>
-</figure>
-<div class="menu-grid"><section class="menu-section menu-section-wide" id="flaschen" aria-labelledby="category-4">
-  <div class="menu-section-heading"><h2 id="category-4">Flaschen</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jack Daniel's</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">80,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Chivas</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">90,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Stock</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">70,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Johnnie Walker</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">70,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Johnnie Black</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">90,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Vodka (Three Sixty, Smirnoff)</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">80,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Belvedere</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">100,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Gin Bombay</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">80,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jäger</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">70,00 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Pelinkovac</h3><p class="menu-item-desc">1.00l</p></div><span class="menu-item-price">70,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Grasevina</h3><p class="menu-item-desc">1.00l</p></div><span class="menu-item-price">30,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Plavac</h3><p class="menu-item-desc">1.00l</p></div><span class="menu-item-price">30,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Prossecco</h3><p class="menu-item-desc">0.75l</p></div><span class="menu-item-price">30,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Moët</h3><p class="menu-item-desc">0.75l</p></div><span class="menu-item-price">100,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Moët Ice</h3><p class="menu-item-desc">0.75l</p></div><span class="menu-item-price">120,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Coca Cola</h3><p class="menu-item-desc">1.00l</p></div><span class="menu-item-price">5,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Bitter Lemon/Tonic Water</h3><p class="menu-item-desc">1.00l</p></div><span class="menu-item-price">5,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Mineral Wasser</h3><p class="menu-item-desc">0.70l</p></div><span class="menu-item-price">5,00 €</span></li>
-  </ul>
-</section>
-<section class="menu-section" id="shots" aria-labelledby="category-5">
-  <div class="menu-section-heading"><h2 id="category-5">Shots</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jäger</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Pelinkovac</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Ramazzotti</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item menu-item-regional"><div class="menu-item-info"><h3 class="menu-item-name">Rakija</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Ficken</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Havana</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Bacardi</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Tequila</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Baylies</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Captain Morgan</h3><p class="menu-item-desc">2cl</p></div><span class="menu-item-price">3,00 €</span></li>
-  </ul>
-</section>
-<section class="menu-section" id="spirituosen" aria-labelledby="category-6">
-  <div class="menu-section-heading"><h2 id="category-6">Spirituosen</h2></div>
-  <ul class="menu-items">
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Jack Daniel's</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Chivas</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Johnnie Walker</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">5,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Johnnie Black</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,50 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Vodka</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Stock</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">5,00 €</span></li>
-    <li class="menu-item"><div class="menu-item-info"><h3 class="menu-item-name">Gin Bombay</h3><p class="menu-item-desc">4cl</p></div><span class="menu-item-price">6,00 €</span></li>
-  </ul>
-</section></div>
-<!-- menu-content:end -->
-      </div>
-      <div class="menu-empty" data-menu-empty hidden><h2>Nichts gefunden.</h2><p>Für diese Suche ist kein Getränk auf der Karte.</p><button type="button" class="button" data-search-reset>Die ganze Karte zeigen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></button></div>
-      <p class="menu-note">Alle Preise in Euro. <span class="regional-key">Balkan-Klassiker</span> sind auf der Karte dezent hervorgehoben.</p>
+
+    <main id="main-content">
+    <div class="container section">
+        <div class="menu-glass-card">
+
+
+            <div class="menu-header">
+                <h1 class="hero-title" style="font-size: 3.5rem;">Getränke</h1>
+                <p class="hero-subtitle">Ausgewählte Spezialitäten von Cafe Lagano</p>
+                
+                <div class="menu-controls">
+                    <div class="menu-search-wrapper">
+                        <input type="text" id="menu-search" class="menu-search" placeholder="Getränk suchen..." aria-label="Menü durchsuchen">
+                        <span class="search-icon">🔍</span>
+                    </div>
+                    <div class="menu-toggle-buttons">
+                        <button class="btn-menu-toggle" id="expand-all" aria-label="Alle Kategorien öffnen">Alle öffnen</button>
+                        <button class="btn-menu-toggle" id="collapse-all" aria-label="Alle Kategorien schließen">Alle schließen</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="menu-container">
+                <!-- Menu items will be rendered here via JavaScript -->
+            </div>
+        </div>
     </div>
-    <section id="menu-visit" class="menu-visit section-space" aria-labelledby="menu-visit-title"><div class="container menu-visit-grid"><div><h2 id="menu-visit-title">Jetzt fehlt nur noch der Tisch.</h2></div><div><p>Komm vorbei und bleib ein bisschen.<br>Marktplatz, 71063 Sindelfingen.</p><a class="button" href="https://www.google.com/maps/dir/?api=1&amp;destination=Marktplatz,+71063+Sindelfingen" target="_blank" rel="noopener noreferrer">Route öffnen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg><span class="sr-only"> (öffnet in neuem Tab)</span></a><a class="text-link" href="index.html#hours">Unsere Öffnungszeiten <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></div></div></section>
-  </main>
-  <!-- shared-footer:start -->
-<footer class="site-footer" id="footer">
-  <div class="container">
-    <div class="footer-main">
-      <div>
-        <a class="wordmark footer-wordmark" href="index.html" aria-label="Cafe Lagano — Startseite"><span class="wordmark-kicker">CAFE</span><span>lagano</span></a>
-        <p>Ein bisschen Balkan.<br>Ganz viel Lagano.</p>
-      </div>
-      <div class="footer-address"><address>Marktplatz<br>71063 Sindelfingen</address></div>
-      <nav class="footer-nav" aria-label="Footernavigation">
-        <a href="index.html#about">Unsere Story</a>
-        <a href="menu.html">Getränkekarte</a>
-        <a href="index.html#hours">Öffnungszeiten</a>
-        <a href="index.html#contact">Vorbeikommen</a>
-      </nav>
-      <a class="text-link footer-route" href="https://www.google.com/maps/dir/?api=1&amp;destination=Marktplatz,+71063+Sindelfingen" target="_blank" rel="noopener noreferrer">Route öffnen <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg><span class="sr-only"> (öffnet in neuem Tab)</span></a>
-    </div>
-    <div class="footer-bottom"><p>© <span data-current-year>2026</span> Cafe Lagano</p><p>Kaffee. Freunde. Ganz lagano.</p><a href="#main-content">Nach oben <svg class="arrow-icon arrow-up" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 4v16m-7-7 7 7 7-7"/></svg></a></div>
-  </div>
-</footer>
-<!-- shared-footer:end -->
+    </main>
+
+    <a href="index.html#contact" class="floating-cta" aria-label="Tisch reservieren">
+        <span>📞</span>
+        <span>Reservieren</span>
+    </a>
+
+    <footer id="footer">
+        <div class="container footer-content">
+            <h3>CAFE LAGANO</h3>
+            <p>Marktplatz, 71063 Sindelfingen</p>
+            <p>Mo - So: 09:00 - 22:00 Uhr</p>
+            <p>&copy; 2026 Cafe Lagano</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
